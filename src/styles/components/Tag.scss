@@ -1,0 +1,15 @@
+@import "../utils.scss";
+
+.tag {
+  padding: 6px 10px;
+  border-radius: 16px;
+  background-color: $accent200;
+  width: fit-content;
+
+  p {
+    color: $accent400 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    width: fit-content !important;
+  }
+}

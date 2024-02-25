@@ -1,0 +1,176 @@
+@import "../utils.scss";
+
+.experience-item {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  padding: 32px 64px 32px 0px;
+  border-radius: 8px;
+  transition: all .2s cubic-bezier(.4, 0, .2, 1);
+  cursor: pointer;
+
+  &:hover .content-column h3 {
+    color: $accent400;
+  }
+
+  &:hover {
+    background-color: rgba(30, 41, 59, .5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000),
+      inset 0 1px 0 0 rgba(148, 163, 184, .1);
+
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, .04)) drop-shadow(0 4px 3px rgba(0, 0, 0, .1));
+  }
+
+  @include breakpoint(tablet) {
+    padding: 0px 24px;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    h3 {
+      color: $accent300 !important;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding: 12px 24px 12px 12px;
+    margin-top: 32px !important;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    h3 {
+      color: $accent300 !important;
+    }
+  }
+
+  .date-column {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 12px;
+    min-width: 140px;
+
+    p {
+      font-size: 13px;
+      font-weight: 500;
+      margin: 0;
+      color: $color-text-secondary;
+    }
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  .date-phone {
+    display: none;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+
+    @include breakpoint(tablet) {
+      display: inline;
+    }
+
+    @include breakpoint(mobile) {
+      display: inline;
+    }
+  }
+
+  .content-column {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+
+
+    h3 {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 500;
+      margin: 12px 0;
+      color: $color-text-primary;
+
+      svg {
+        margin-left: 4px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0;
+      color: $color-text-secondary;
+    }
+
+    .tags {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+  }
+
+  b {
+    font-size: 16px;
+    color: $color-text-intermediate;
+  }
+
+  li::marker {
+    color: $accent400;
+  }
+
+  ul {
+    margin-top: 0px;
+    padding-left: 0;
+    list-style-position: outside;
+
+    li {
+      margin-top: 8px;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 32px;
+
+      li {
+        margin-top: 0;
+      }
+
+      p {
+        line-height: 18px !important;
+        font-size: 13px !important;
+      }
+    }
+  }
+
+  .responsibilities-title,
+  .key-achievements-title {
+    margin-top: 12px !important;
+  }
+}

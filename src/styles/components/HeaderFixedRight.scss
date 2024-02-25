@@ -1,0 +1,127 @@
+@import "../utils.scss";
+
+.header-fixed-right {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 96px;
+  align-self: flex-start;
+  position: sticky;
+  inset: 0;
+  box-sizing: border-box;
+
+  @include breakpoint(desktop) {
+    width: 35%;
+    padding: 96px 48px;
+  }
+
+  @include breakpoint(tablet) {
+    padding: 96px 24px;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 96px 24px;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .title {
+    h1 {
+      margin-top: 0;
+      letter-spacing: -.025em;
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      margin-top: 8px;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 16px;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: $color-text-secondary;
+      margin-bottom: 24px;
+      max-width: 400px;
+    }
+  }
+
+  nav {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .nav-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 12px 0;
+    gap: 16px;
+    cursor: pointer;
+    text-decoration: none;
+
+    .nav-element-bar {
+      content: ' ';
+      background-color: $color-text-secondary;
+      width: 40px;
+      height: 1px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-element-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: inherit;
+      letter-spacing: 0.025em;
+      color: $color-text-secondary;
+      margin: 0;
+    }
+
+    &.active,
+    &:hover {
+      .nav-element-bar {
+        background-color: $color-text-primary;
+        width: 80px;
+      }
+
+      .nav-element-text {
+        color: $color-text-primary;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0 0 12px;
+    gap: 24px;
+    font-size: 26px;
+
+    a {
+      color: $color-text-secondary;
+      transition: all 0.2s ease;
+      transform: scale(1);
+
+      &:hover {
+        transform: scale(1.2);
+        color: $color-text-primary;
+      }
+    }
+  }
+}
