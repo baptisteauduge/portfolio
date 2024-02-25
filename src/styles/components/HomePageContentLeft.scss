@@ -6,6 +6,7 @@
   box-sizing: border-box;
   padding: 96px 96px 96px 0;
 
+
   @include breakpoint(desktop) {
     width: 65%;
   }
@@ -29,7 +30,7 @@
   .about-section {
     color: $color-text-secondary;
     display: inline-block;
-    font-size: 14px;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -42,6 +43,10 @@
       svg {
         margin-right: 8px;
       }
+    }
+
+    p {
+      text-align: justify;
     }
   }
 

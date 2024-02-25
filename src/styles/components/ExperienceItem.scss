@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
-  padding: 32px 64px 32px 0px;
+  padding: 32px;
   border-radius: 8px;
   transition: all .2s cubic-bezier(.4, 0, .2, 1);
   cursor: pointer;
@@ -52,7 +52,7 @@
 
   .date-column {
     width: 25%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -76,23 +76,13 @@
     }
   }
 
-  .date-phone {
-    display: none;
-    font-size: 13px;
+  .date {
+    font-size: 15px;
     font-weight: 500;
-    margin: 0;
-
-    @include breakpoint(tablet) {
-      display: inline;
-    }
-
-    @include breakpoint(mobile) {
-      display: inline;
-    }
   }
 
   .content-column {
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -120,9 +110,10 @@
     }
 
     p {
-      font-size: 14px;
+      font-size: 15px;
       margin: 0;
       color: $color-text-secondary;
+      text-align: justify;
     }
 
     .tags {
@@ -147,7 +138,7 @@
 
   ul {
     margin-top: 0px;
-    padding-left: 0;
+    padding-left: 14px;
     list-style-position: outside;
 
     li {
@@ -163,8 +154,7 @@
       }
 
       p {
-        line-height: 18px !important;
-        font-size: 13px !important;
+        font-size: 15px !important;
       }
     }
   }
