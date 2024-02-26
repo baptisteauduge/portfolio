@@ -207,7 +207,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             />
           </div>
           <div ref={refProjects} className="projects-section">
-            <h1 id="experiences">Projects</h1>
+            <h1 id="projects">Projects</h1>
             <ProjectItem
               date="May 2023"
               status="default"
