@@ -1,14 +1,14 @@
-import React from 'react'
-import 'styles/components/Tag.scss'
+import React from 'react';
+import 'styles/components/Tag.scss';
 
 interface TagProps {
-  children: string,
+  children: string;
 }
 
-export const Tag: React.FC<TagProps> = ({
-  children,
-}) => {
+export const Tag: React.FC<TagProps> = ({ children }) => {
   return (
-    <div className='tag'><p>{children}</p></div>
-  )
-}
+    <div className="tag">
+      <p>{children}</p>
+    </div>
+  );
+};

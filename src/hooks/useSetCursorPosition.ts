@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 
 export const useSetCursorPosition = (
-  setCursorPosition: React.Dispatch<React.SetStateAction<{x: number, y: number}>>,
+  setCursorPosition: React.Dispatch<
+    React.SetStateAction<{ x: number; y: number }>
+  >,
 ) => {
-  
   React.useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      if (event.clientX === undefined || event.screenY === undefined)
-        return;
-        setCursorPosition({
-          x: event.clientX,
-          y: event.clientY,
-        })
+      if (event.clientX === undefined || event.screenY === undefined) return;
+      setCursorPosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [setCursorPosition]);
 };

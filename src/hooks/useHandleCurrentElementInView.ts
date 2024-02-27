@@ -1,20 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-export const useHandleCurrentElementInView = (inViewAbout: boolean, inViewExperiences: boolean, inViewProjects: boolean) => {
+export const useHandleCurrentElementInView = (
+  inViewAbout: boolean,
+  inViewExperiences: boolean,
+  inViewProjects: boolean,
+) => {
+  const [currentElementInView, setCurrentElementInView] = useState('about');
 
-    const [currentElementInView, setCurrentElementInView] = useState("about");
+  useEffect(() => {
+    if (inViewAbout) {
+      setCurrentElementInView('about');
+    }
+    if (inViewExperiences) {
+      setCurrentElementInView('experiences');
+    }
+    if (inViewProjects) {
+      setCurrentElementInView('projects');
+    }
+  }, [inViewAbout, inViewExperiences, inViewProjects]);
 
-    useEffect(() => {
-      if (inViewAbout) {
-        setCurrentElementInView("about");
-      }
-      if (inViewExperiences) {
-        setCurrentElementInView("experiences");
-      }
-      if (inViewProjects) {
-        setCurrentElementInView("projects");
-      }
-    }, [inViewAbout, inViewExperiences, inViewProjects]);
-
-    return currentElementInView;
-}
+  return currentElementInView;
+};

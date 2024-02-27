@@ -334,7 +334,8 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             Crafted with ❤️ by Baptiste Audugé. Built using React and Vite for a
             smooth user experience, and deployed on Vercel for lightning-fast
             performance. This website's design is heavily influenced by the work
-            of <i>Brittany Chiang</i> a skilled UI and Software Engineer.
+            of <i>Brittany Chiang</i> a skilled UI designer and Software
+            Engineer.
           </p>
           <br />
           <br />

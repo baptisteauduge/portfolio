@@ -1,2 +1,2 @@
-export * from './useSetCursorPosition'
-export * from './useHandleCurrentElementInView'
+export * from './useSetCursorPosition';
+export * from './useHandleCurrentElementInView';
