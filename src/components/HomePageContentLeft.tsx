@@ -139,7 +139,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
                     'PER (Plan Épargne Retraite) retirement savings plan simulation',
                   ],
                 },
-                'Automated 100% of data delivery to clients based on their lead type preferences, reducing manual work by 50% and improving client satisfaction by 10% through faster and more accurate data delivery.',
+                'Automated 100% of data delivery to clients based on their lead type preferences, reducing manual work by 50% and improving client satisfaction through faster and more accurate data delivery.',
                 'Developed and implemented a comprehensive design system using Storybook, ensuring consistency and maintainability across all web applications. This resulted in improved developer efficiency, reduced design inconsistencies, and a more seamless user experience.',
               ]}
               responsibilities={[
