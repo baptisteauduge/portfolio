@@ -10,7 +10,7 @@ interface ProjectItemProps {
   tags: Array<string>;
   status: 'default' | 'lowOpacity';
   title: string;
-  link: string;
+  link?: string;
 }
 
 export const ProjectItem: React.FC<ProjectItemProps> = ({
@@ -25,13 +25,13 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
     <div
       className={`project-item ${status}`}
       onClick={() => {
-        window.open(link, '_blank');
+        if (link) window.open(link, '_blank');
       }}
     >
       <div className="content-column">
         <p className="date">{date}</p>
         <h3>
-          {title} <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          {title} {link && <FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
         </h3>
         {children}
         <div className="tags">

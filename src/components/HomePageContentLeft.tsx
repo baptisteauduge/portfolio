@@ -47,11 +47,10 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             My Academic Journey
           </b>
           <p>
-            Currently, I'm pursuing a Dual Bachelor's Degree in Mathematics and
-            Computer Science at Sorbonne University, where I'm thriving in a
-            rigorous academic environment. My studies have provided me with a
-            deep understanding of theoretical foundations and practical
-            problem-solving methodologies, which I actively apply in my work.
+            Currently, I'm a student at CentraleSupélec, where I'm thriving in a
+            rigorous engineering program. My studies provide a strong foundation
+            in mathematics, engineering principles, and practical
+            problem-solving methodologies that I actively apply in my work.
           </p>
           <b>
             <FontAwesomeIcon icon={faMicrochip} />
@@ -84,12 +83,9 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           </b>
           <p>
             My curiosity extends beyond technical expertise. I'm particularly
-            interested in the potential of Artificial Intelligence,
-            Cybersecurity, and Quantitative Finance, actively seeking
-            opportunities to explore these fields through projects and research.
-            I also believe in the power of interdisciplinary collaboration, and
-            I'm always looking for ways to integrate my diverse interests into
-            my work.
+            interested about Artificial Intelligence, High Performance
+            Calculations, Embedded Systems, actively seeking opportunities to
+            explore these fields through projects and research.
           </p>
           <b>
             <FontAwesomeIcon icon={faMusic} />
@@ -98,27 +94,49 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           <p>
             While I'm deeply passionate about technology, I value the importance
             of a well-rounded life. My interests extend beyond computer science,
-            including music and sports, which I believe contribute to creativity
-            and problem-solving in unexpected ways.
+            including music (DJing, and Bass Player), cooking.
           </p>
           <b>
             <FontAwesomeIcon icon={faEye} />
             Looking Ahead
           </b>
           <p>
-            I'm driven by a constant desire to learn, grow, and contribute
-            meaningfully to the world. Whether it's pursuing a career in
-            research, development, or entrepreneurship, I'm excited to leverage
-            my skills and knowledge to tackle complex challenges and make a
-            positive impact.
+            I'm driven by a constant desire to learn and grow. Whether it's
+            pursuing a career in research, development, or entrepreneurship, I'm
+            excited to leverage my skills and knowledge to tackle complex
+            challenges and make a positive impact.
           </p>
         </div>
         <div ref={refExperiences} className="experiences-section">
           <h1 id="experiences">Professional Experiences</h1>
           <div className="experiences-container">
             <ExperienceItem
+              beginYear="2024"
+              endYear="Present"
+              tags={['React', 'NestJs', 'Stripe', 'MQTT', 'Redis']}
+              keyAchievements={[
+                {
+                  achievement:
+                    'Launched 3 artistic website with e-commerce functionalities respecting (very) short deadlines. These websites include:',
+                  subElements: [
+                    'The Undrinkable Can',
+                    'The American Roulette',
+                    'The Last Dollar',
+                  ],
+                },
+              ]}
+              responsibilities={[
+                'Delivered high-velocity e-commerce websites, managing fast prototyping and launches to meet tight artistic deadlines.',
+                'Implemented payment (Stripe), IoT communication (MQTT) and scaling (Redis) to ensure smooth user experiences and scalable performance.',
+                'Collaborated closely with designers and artists to translate creative briefs into production-ready sites, and maintained deployments and monitoring.',
+              ]}
+              status="default"
+              title="Fullstack Developer • QSTNMRK"
+              link="https://www.qstnmrk.com/"
+            />
+            <ExperienceItem
               beginYear="2023"
-              endYear="PRESENT"
+              endYear="2024"
               tags={[
                 'React',
                 'NestJs',
@@ -153,7 +171,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             />
             <ExperienceItem
               beginYear="2022"
-              endYear="2023"
+              endYear="2024"
               tags={[
                 'React',
                 'NestJs',
@@ -209,6 +227,90 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           <div ref={refProjects} className="projects-section">
             <h1 id="projects">Projects</h1>
             <ProjectItem
+              date="November 2025"
+              status="default"
+              title="Autonomous vehicle for urban delivery"
+              tags={[
+                'Computer Vision',
+                'Embedded Systems',
+                'Arduino',
+                'Raspberry Pi',
+                'Control',
+              ]}
+            >
+              <p>
+                I designed and programmed a small autonomous delivery vehicle
+                combining image processing and control algorithms. Running on
+                Raspberry Pi and Arduino, the system detects the track, computes
+                steering commands, and controls the motors to follow routes and
+                handle turns in a constrained urban-like environment.
+              </p>
+            </ProjectItem>
+            <ProjectItem
+              date="June 2024"
+              status="default"
+              title="Graphical models for financial dependency analysis"
+              tags={[
+                'Python',
+                'Graphical Models',
+                'Finance',
+                'Statistics',
+                'Machine Learning',
+              ]}
+            >
+              <p>
+                I implemented graphical models to study conditional dependencies
+                between MSCI World assets using Graphical Lasso. The project
+                included model selection, rolling-window validation, and
+                interpretation of the resulting network structure to better
+                understand market dynamics.
+              </p>
+            </ProjectItem>
+            <ProjectItem
+              date="May 2024"
+              status="default"
+              title="Anomaly detection on LoRaWAN IoT network"
+              tags={[
+                'PySpark',
+                'Spark',
+                'IoT',
+                'Time Series',
+                'Anomaly Detection',
+              ]}
+            >
+              <p>
+                In collaboration with Bouygues Telecom, I built a Spark-based
+                data pipeline to process large-scale LoRaWAN network logs and
+                detect abnormal behaviors. Using time-series features and
+                unsupervised methods, the system identifies anomalous devices or
+                traffic patterns and suggests potential root causes.
+              </p>
+            </ProjectItem>
+
+            <ProjectItem
+              date="April 2023"
+              status="default"
+              title="Git like version control system using C"
+              link="https://github.com/baptisteauduge/mygit"
+              tags={[
+                'C',
+                'Version Control System',
+                'Data Structures',
+                'Algorithms',
+                'Operating Systems',
+              ]}
+            >
+              <p>
+                I developed a miniature Git version control system in C,
+                allowing users to manage local code repositories. Users can
+                initialize repositories, create and switch between branches,
+                stage and commit changes, explore past versions, and even merge
+                branches. Built with modularity and clarity, this project
+                provides a valuable learning experience in version control
+                fundamentals.{' '}
+              </p>
+            </ProjectItem>
+            <ProjectItem
               date="May 2023"
               status="default"
               title="Content based TV Show Recommendation Algorithm using NLP"
@@ -234,29 +336,6 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
                 determine the effectiveness of this approach in recommending TV
                 shows, ultimately assessing its viability as a personalized
                 recommendation method.
-              </p>
-            </ProjectItem>
-            <ProjectItem
-              date="April 2023"
-              status="default"
-              title="Git like version control system using C"
-              link="https://github.com/baptisteauduge/mygit"
-              tags={[
-                'C',
-                'Version Control System',
-                'Data Structures',
-                'Algorithms',
-                'Operating Systems',
-              ]}
-            >
-              <p>
-                I developed a miniature Git version control system in C,
-                allowing users to manage local code repositories. Users can
-                initialize repositories, create and switch between branches,
-                stage and commit changes, explore past versions, and even merge
-                branches. Built with modularity and clarity, this project
-                provides a valuable learning experience in version control
-                fundamentals.{' '}
               </p>
             </ProjectItem>
             <ProjectItem

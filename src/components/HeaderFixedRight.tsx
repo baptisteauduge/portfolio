@@ -18,10 +18,9 @@ export const HeaderFixedRight: React.FC<HeaderFixedRightProps> = ({
       <div className="flex-top">
         <div className="title">
           <h1>Baptiste Audugé</h1>
-          <h2>FullStack Freelance Developer</h2>
+          <h2>FullStack Freelance Developer & Engineering Student</h2>
           <p>
-            I'm a fullstack freelance developer, I can help you with your
-            project, from the idea to the production.
+            Open to work opportunities - Based in France - Available for remote
           </p>
         </div>
         <nav>
