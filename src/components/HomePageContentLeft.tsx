@@ -178,6 +178,8 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               title="Lead Developer • QSTNMRK"
               link="https://www.designboom.com/art/internet-living-sculpture-one-dollar-time-qstnmrk-the-last-dollar/"
             />
+            {/* TODO: Logic Invest is the only experience shown in years. What
+                are the exact start and end months? */}
             <ExperienceItem
               beginYear="2023"
               endYear="2024"
@@ -194,25 +196,22 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               keyAchievements={[
                 {
                   achievement:
-                    'Developed and launched 2 financial simulators using React and NestJS, leading to a 4% increase in conversion rates and generating qualified leads in a highly competitive market. These simulators cover diverse aspects of the French tax system, including:',
+                    'Built two financial simulators with React and NestJS, each covering a part of the French tax system:',
                   subElements: [
-                    'Tax estimation for the French income tax (slice tax)',
-                    'Analysis of the PINEL investment law',
-                    'PER (Plan Épargne Retraite) retirement savings plan simulation',
+                    'Income tax estimation, bracket by bracket',
+                    'The PINEL property investment scheme',
+                    'PER (Plan Épargne Retraite) retirement savings plans',
                   ],
                 },
-                'Automated 100% of data delivery to clients based on their lead type preferences, reducing manual work by 50% and improving client satisfaction through faster and more accurate data delivery.',
-                'Developed and implemented a comprehensive design system using Storybook, ensuring consistency and maintainability across all web applications. This resulted in improved developer efficiency, reduced design inconsistencies, and a more seamless user experience.',
-              ]}
-              responsibilities={[
-                'Led the development and maintenance of web applications using modern technologies.',
-                'Collaborated with stakeholders to understand requirements, design solutions, and deliver projects on time and within budget.',
-                'Managed technical data infrastructure and ensured data integrity and security.',
+                'Automated the delivery of leads to clients based on their lead-type preferences, which removed most of the manual handling.',
+                'Set up a design system in Storybook, so the different web applications stopped drifting apart visually.',
               ]}
               status="default"
               title="Fullstack Developer • Logic Invest"
               link="https://www.logic-invest.com/simulateurs/per"
             />
+            {/* TODO: confirm the Generali partnership is public before this
+                ships to recruiters. */}
             <ExperienceItem
               beginYear="Jun 2022"
               endYear="Sep 2024"
@@ -229,15 +228,10 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               ]}
               status="default"
               title="Product Developer • Monaliza"
+              context="B2B2C financial products distributor, in partnership with Generali"
               keyAchievements={[
-                'Collaborated closely with the product team to conceptualize the monaliza digital retirement savings platform. Developed financial simulators, server infrastructure, and monitoring solutions. This platform empowers users to simulate their retirement pension, reduce taxes, and generate a lifetime complementary income.',
-                'Played a pivotal role in the development of the monaliza financial simulator using React and NestJS, incorporating key financial formulas and providing users with personalized estimates and information. The simulator offers three paths corresponding to different retirement objectives: improving retirement income, reducing taxes, and building capital.',
-                "Implemented and configured servers, development environments, and monitoring solutions using Traefik, Prometheus, and Grafana. This ensured the platform's scalability, reliability, and performance.",
-              ]}
-              responsibilities={[
-                'Collaborated with the product team to conceptualize and design the monaliza platform.',
-                "Developed and maintained the platform's financial simulator using React and NestJS.",
-                'Implemented and configured servers, development environments, and monitoring solutions.',
+                'Worked with the product team on the monaliza retirement savings simulator, in React and NestJS, writing the financial formulas behind the estimates it returns. It has three paths, depending on whether the user wants to improve their retirement income, reduce taxes, or build capital.',
+                'Set up the servers, the development environments, and the monitoring, with Traefik, Prometheus, and Grafana.',
               ]}
               link="https://www.monaliza.fr/"
             />
@@ -257,13 +251,9 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               status="default"
               title="Fullstack Developer • Lexem"
               keyAchievements={[
-                'Developed and optimized multiple financial simulators for SEO/SEA marketing, driving increased lead generation and conversion. This helped adapt to growing market competition and improve campaign effectiveness.',
-                'Conceived, designed, and implemented a web application for digital client file submission and appointment optimization between advisors and prospects. This streamlined the client intake process and improved efficiency.',
-                'Managed the internal Salesforce CRM administration in collaboration with an external team at BayBridgeDigital. This ensured data integrity and optimized internal processes.',
-              ]}
-              additionalInformations={[
-                'Developed several iterations of the web application and financial simulators to adapt to evolving market needs and optimize conversion rates.',
-                "The developed infrastructure played a crucial role in securing a successful business acquisition, highlighting its significant impact on the company's growth and overall success.",
+                'Built and maintained the financial simulators used in the SEO and SEA campaigns, and reworked them over several iterations as the market got more competitive.',
+                "Designed and built a web application for submitting client files digitally and booking appointments between advisors and prospects. The platform was part of the company's sales operations at the time of its partial acquisition.",
+                'Administered the internal Salesforce CRM, with an external team at BayBridgeDigital.',
               ]}
               link="https://www.lexem.io/"
             />
