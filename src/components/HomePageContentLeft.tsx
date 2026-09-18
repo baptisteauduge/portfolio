@@ -48,12 +48,12 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             My Academic Journey
           </b>
           <p>
-            I studied mathematics and computer science in a double bachelor's
-            program at Sorbonne University, and I'm now a student at
-            CentraleSupélec, in a rigorous engineering program that builds on
-            that foundation. It is what lets me read a scientific paper, derive
-            the equations that govern a physical system, and turn them into a
-            model that runs.
+            I earned a double bachelor's degree in mathematics and computer
+            science at Sorbonne University, then joined CentraleSupélec, where
+            I'm currently on a gap year before my final engineering year. That
+            foundation is what lets me read a scientific paper, derive the
+            equations that govern a physical system, and turn them into a model
+            that runs.
           </p>
           <b>
             <FontAwesomeIcon icon={faMicrochip} />
