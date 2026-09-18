@@ -1,0 +1,111 @@
+<!doctype html>
+<!--
+  Source for public/og-image.png (1200x630 social card).
+  Regenerate after editing:
+
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+      --disable-gpu --hide-scrollbars --window-size=1200,630 \
+      --screenshot=public/og-image.png scripts/og-image.html
+
+  Social crawlers do not render SVG, so the committed PNG is what ships.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+      }
+
+      body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 100px;
+        background-color: #0f172a;
+        color: #e2e8f0;
+        font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      }
+
+      /* Same cursor-light gradient the site paints behind its content. */
+      body::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          600px at 900px 120px,
+          rgba(29, 78, 216, 0.25),
+          transparent 80%
+        );
+      }
+
+      .content {
+        position: relative;
+      }
+
+      h1 {
+        font-size: 76px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        line-height: 1.1;
+      }
+
+      h2 {
+        margin-top: 20px;
+        font-size: 38px;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        color: #5eead4;
+      }
+
+      p {
+        margin-top: 24px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #94a3b8;
+      }
+
+      .rule {
+        width: 96px;
+        height: 3px;
+        margin-top: 44px;
+        background-color: #5eead4;
+      }
+
+      .footer {
+        position: absolute;
+        left: 100px;
+        bottom: 72px;
+        font-size: 22px;
+        font-weight: 500;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+      <h1>Baptiste Audugé</h1>
+      <h2>AI &amp; Forward Deployed Engineering</h2>
+      <p>Engineering Student at CentraleSupélec</p>
+      <div class="rule"></div>
+    </div>
+    <div class="footer">auduge.com</div>
+  </body>
+</html>
