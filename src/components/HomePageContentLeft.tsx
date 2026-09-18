@@ -267,7 +267,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           <ProjectItem
             date="May 2024"
             status="default"
-            title="Anomaly detection on LoRaWAN IoT network"
+            title="Anomaly Detection on a LoRaWAN IoT Network"
             tags={[
               'PySpark',
               'Spark',
@@ -277,17 +277,16 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             ]}
           >
             <p>
-              In collaboration with Bouygues Telecom, I built a Spark-based data
-              pipeline to process large-scale LoRaWAN network logs and detect
-              abnormal behaviors. Using time-series features and unsupervised
-              methods, the system identifies anomalous devices or traffic
-              patterns and suggests potential root causes.
+              A Spark pipeline over large-scale LoRaWAN network logs that flags
+              devices and traffic patterns behaving abnormally, and points at
+              possible causes. The detection is unsupervised, on time-series
+              features derived from the logs. Built with Bouygues Telecom.
             </p>
           </ProjectItem>
           <ProjectItem
             date="June 2024"
             status="default"
-            title="Graphical models for financial dependency analysis"
+            title="Graphical Models for Financial Dependency Analysis"
             tags={[
               'Python',
               'Graphical Models',
@@ -297,17 +296,17 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             ]}
           >
             <p>
-              I implemented graphical models to study conditional dependencies
-              between MSCI World assets using Graphical Lasso. The project
-              included model selection, rolling-window validation, and
-              interpretation of the resulting network structure to better
-              understand market dynamics.
+              Estimates the conditional dependencies between MSCI World assets
+              with Graphical Lasso, then reads the network that comes out of it.
+              The structure you recover depends heavily on the regularization
+              you pick, so most of the work was model selection and
+              rolling-window validation.
             </p>
           </ProjectItem>
           <ProjectItem
             date="November 2025"
             status="default"
-            title="Autonomous vehicle for urban delivery"
+            title="Autonomous Vehicle for Urban Delivery"
             tags={[
               'Computer Vision',
               'Embedded Systems',
@@ -317,17 +316,17 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             ]}
           >
             <p>
-              I designed and programmed a small autonomous delivery vehicle
-              combining image processing and control algorithms. Running on
-              Raspberry Pi and Arduino, the system detects the track, computes
-              steering commands, and controls the motors to follow routes and
-              handle turns in a constrained urban-like environment.
+              A small delivery vehicle that follows a route on its own, running
+              on a Raspberry Pi and an Arduino. It detects the track by image
+              processing, computes a steering command, and drives the motors to
+              stay on the route and take turns, in a constrained urban-like
+              environment.
             </p>
           </ProjectItem>
           <ProjectItem
             date="May 2023"
             status="default"
-            title="Content-Based TV Show Recommendation Algorithm using NLP"
+            title="Content-Based TV Show Recommendation (NLP)"
             link="https://github.com/baptisteauduge/movies-recommendation-and-subtitles-analysis"
             tags={[
               'Natural Language Processing',
@@ -341,21 +340,17 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             ]}
           >
             <p>
-              Under the guidance of Nicolas Baskiotis, a researcher at LIP6, we
-              delved into developing a content-based recommendation algorithm
-              leveraging natural language processing (NLP). Utilizing publicly
-              available data, we applied powerful tools like TF-IDF, K-Means,
-              and Perceptron to uncover hidden patterns and connections within
-              the content. This exploration aimed to determine the effectiveness
-              of this approach in recommending TV shows, ultimately assessing
-              its viability as a personalized recommendation method.
+              A recommender built on subtitle text rather than ratings, using
+              TF-IDF, K-Means, and a perceptron. Supervised by Nicolas Baskiotis
+              (LIP6). The interesting part was how much the results depended on
+              preprocessing choices.
             </p>
           </ProjectItem>
           <h3 className="project-group">Systems &amp; Algorithms</h3>
           <ProjectItem
             date="April 2023"
             status="default"
-            title="Git-like version control system using C"
+            title="Git-Like Version Control System (C)"
             link="https://github.com/baptisteauduge/mygit"
             tags={[
               'C',
@@ -365,19 +360,17 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               'Operating Systems',
             ]}
           >
+            {/* TODO: one line on what was hardest here (the object store? merging?) would match the other projects. */}
             <p>
-              I developed a miniature Git version control system in C, allowing
-              users to manage local code repositories. Users can initialize
-              repositories, create and switch between branches, stage and commit
-              changes, explore past versions, and even merge branches. Built
-              with modularity and clarity, this project provides a valuable
-              learning experience in version control fundamentals.{' '}
+              A small version control system in C, for local repositories. It
+              can initialize a repository, stage and commit changes, create and
+              switch branches, browse earlier versions, and merge branches.
             </p>
           </ProjectItem>
           <ProjectItem
             date="November 2023"
             status="default"
-            title="Picross Solver using Dynamic Programming, backtracking (forward checking) algorithms in C++"
+            title="Picross Solver (C++)"
             link="https://github.com/baptisteauduge/picross-solver"
             tags={[
               'Algorithms',
@@ -388,20 +381,16 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             ]}
           >
             <p>
-              We built a Picross solver in C++, wielding dynamic programming and
-              backtracking for efficient solutions. One approach prioritizes
-              speed, tackling puzzles quickly, while another guarantees a
-              solution, even for the trickiest ones. Both leverage an initial
-              analysis, then the second employs a more exhaustive search if
-              needed. Users interact through a command line, specifying the
-              puzzle file and desired approach. This project offers valuable
-              insights into optimization techniques.
+              A Picross solver with two strategies: a fast one based on dynamic
+              programming, and an exhaustive backtracking search with forward
+              checking for the puzzles the first one can't finish. Runs from the
+              command line on a puzzle file.
             </p>
           </ProjectItem>
           <ProjectItem
             date="June 2023"
             status="default"
-            title="OCaml Interpreter for a stack based language inspired by PostScript"
+            title="Stack-Based Language Interpreter (OCaml)"
             link="https://github.com/baptisteauduge/interpreter-pf2023"
             tags={[
               'OCaml',
@@ -411,36 +400,26 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               'PostScript',
             ]}
           >
+            {/* TODO: which course was PF23 written for? The other projects name their course or supervisor. */}
             <p>
-              I built a stack-based programming language, PF23, inspired by
-              PostScript. This user-friendly language prioritizes simplicity and
-              ease of use. It operates on a stack, manipulating data like
-              numbers and booleans. Programs consist of operators, functions,
-              and conditional statements, forming a readable sequence. Operators
-              perform basic arithmetic and comparisons, while functions offer
-              reusable code blocks. Conditional statements enable
-              decision-making within the program. Our OCaml interpreter reads
-              and executes PF23 programs, providing a platform for
-              experimentation and learning.{' '}
+              An interpreter in OCaml for PF23, a small stack-based language
+              inspired by PostScript. Programs push numbers and booleans onto a
+              stack and work on them with operators, user-defined functions, and
+              conditionals.
             </p>
           </ProjectItem>
           <ProjectItem
             date="February 2024"
             status="default"
-            title="Vigenère Cipher Cracker using Index of Coincidence, Index of Coincidence Mutual and Pearson Correlation Coefficient in Python"
+            title="Vigenère Cipher Cracker"
             link="https://github.com/baptisteauduge/vigenere-cipher-crack"
             tags={['Cryptography', 'Python', 'Algorithms', 'Cybersecurity']}
           >
             <p>
-              This project delves into the Vigenère Cipher, a classic encryption
-              method, implemented in Python. We explored its polyalphabetic
-              substitution technique, where a keyword determines ciphertext
-              shifts. But the fun doesn't stop there! We also cracked the code
-              using advanced methods like the Index of Coincidence (IC), Index
-              of Coincidence Mutual (ICM), and Pearson Correlation Coefficient.
-              This project, born from the "Cryptography" course (3I024) at
-              Sorbonne University, offers a practical exploration of encryption
-              and decryption.
+              Breaks Vigenère ciphertext without the key, using the index of
+              coincidence to find the key length and Pearson correlation to
+              recover it. Written for the cryptography course (3I024) at
+              Sorbonne University.
             </p>
           </ProjectItem>
         </div>
