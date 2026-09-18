@@ -53,7 +53,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
         {context ? <p className="context">{context}</p> : null}
         {keyAchievements?.length ? (
           <p className="key-achievements-title">
-            <b>Key Achievements :</b>
+            <b>Key Achievements:</b>
           </p>
         ) : null}
         <ul>
@@ -82,7 +82,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
         </ul>
         {responsibilities?.length ? (
           <p className="responsibilities-title">
-            <b>Responsibilities :</b>
+            <b>Responsibilities:</b>
           </p>
         ) : null}
         <ul>
@@ -96,8 +96,8 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
         </ul>
 
         {additionalInformations?.length ? (
-          <p className="additional-informations-title">
-            <b>Additional Informations :</b>
+          <p className="additional-information-title">
+            <b>Additional Information:</b>
           </p>
         ) : null}
         <ul>

@@ -66,7 +66,7 @@ export const HeaderFixedRight: React.FC<HeaderFixedRightProps> = ({
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="mailto:baptiste@auduge.com" target="_blank">
+          <a href="mailto:baptiste.auduge@student-cs.fr" target="_blank">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
           <a href="tel:+33637623051" target="_blank">

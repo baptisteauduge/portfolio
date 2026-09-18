@@ -37,74 +37,83 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           </b>
           <p>
             From a young age, I've been fascinated by the way technology can
-            solve problems and push boundaries. This passion led me to delve
-            into the world of programming at the age of 12, and since then, I've
-            continually honed my skills and explored diverse areas of computer
-            science.
+            solve problems and push boundaries. This passion led me into
+            programming at the age of 12, and I have been building things ever
+            since. What I enjoy most has not changed: taking a problem someone
+            actually has, understanding it deeply enough to model it, and
+            shipping something that works in production.
           </p>
           <b>
             <FontAwesomeIcon icon={faBook} />
             My Academic Journey
           </b>
           <p>
-            Currently, I'm a student at CentraleSupélec, where I'm thriving in a
-            rigorous engineering program. My studies provide a strong foundation
-            in mathematics, engineering principles, and practical
-            problem-solving methodologies that I actively apply in my work.
+            I'm currently a student at CentraleSupélec, in a rigorous
+            engineering program that gives me a strong foundation in
+            mathematics, physics, and computer science. That background is what
+            lets me read a scientific paper, derive the equations that govern a
+            physical system, and turn them into a model that runs.
           </p>
           <b>
             <FontAwesomeIcon icon={faMicrochip} />
             Technical Expertise
           </b>
           <p>
-            I have a strong command of various programming languages, including
-            C, C++, Java, Python, TypeScript, and Web Development languages. My
-            toolset extends beyond languages, encompassing frameworks and
-            methodologies relevant to modern software development. I'm a quick
-            learner and adept at adapting to new technologies, constantly
-            expanding my knowledge base to tackle challenging projects.
+            My core work today is applied AI: deep learning in PyTorch,
+            Transformers and Neural ODEs, physics-informed modeling, and
+            time-series problems where the data is messy and the domain matters.
+            Around the model, I handle the unglamorous half — extracting data
+            over SQL and REST APIs, auditing what it actually contains, and
+            processing it at scale with Spark. I also develop with Claude Code
+            and MCP tooling day to day. Alongside that, I'm a full-stack
+            engineer in Python, TypeScript, React, and NestJS, and I'm
+            comfortable in C, C++, Java, and OCaml.
           </p>
           <b>
             <FontAwesomeIcon icon={faUserTie} />
             Professional Experience
           </b>
           <p>
-            While pursuing my academic journey, I've also gained practical
-            experience through freelance development work. This has allowed me
-            to collaborate with diverse clients, understand their needs, and
-            translate them into effective web and mobile solutions. I'm
-            passionate about working on projects with real-world impact, and my
-            experience has equipped me with valuable skills in communication,
-            collaboration, and project management.
+            I'm currently a data science intern at Orano, where I work on a
+            production model used to plan operations across uranium mines, side
+            by side with the operations and geology teams who rely on it. In
+            parallel, I lead development at QSTNMRK, shipping artistic
+            e-commerce and live-streaming projects end to end. Before that,
+            freelance work taught me the part that no course does: sitting with
+            a client, turning a vague business need into a specification, and
+            being accountable for what happens after it goes live.
           </p>
           <b>
             <FontAwesomeIcon icon={faHeart} />
             Areas of Interest
           </b>
           <p>
-            My curiosity extends beyond technical expertise. I'm particularly
-            interested about Artificial Intelligence, High Performance
-            Calculations, Embedded Systems, actively seeking opportunities to
-            explore these fields through projects and research.
+            I'm most interested in AI that has to survive contact with the real
+            world: physics-informed and time-series modeling, anomaly detection
+            on large-scale sensor data, and the agent and MCP tooling that is
+            changing how software gets built. High performance computing and
+            embedded systems keep pulling me in too, and I look for projects and
+            research that let me go deeper into all of it.
           </p>
           <b>
             <FontAwesomeIcon icon={faMusic} />
             Beyond the Code
           </b>
           <p>
-            While I'm deeply passionate about technology, I value the importance
-            of a well-rounded life. My interests extend beyond computer science,
-            including music (DJing, and Bass Player), cooking.
+            While I'm deeply passionate about technology, I value a well-rounded
+            life. My interests extend beyond computer science: I DJ, I play bass
+            guitar, and I cook.
           </p>
           <b>
             <FontAwesomeIcon icon={faEye} />
             Looking Ahead
           </b>
           <p>
-            I'm driven by a constant desire to learn and grow. Whether it's
-            pursuing a career in research, development, or entrepreneurship, I'm
-            excited to leverage my skills and knowledge to tackle complex
-            challenges and make a positive impact.
+            I'm looking for a 5.5-month internship starting in February or March
+            2027, in Asia, the US, or Canada, as an AI forward deployed
+            engineer: sitting close to the people with the problem, and building
+            the model and the software that solves it. If that sounds like your
+            team, I'd love to hear from you.
           </p>
         </div>
         <div ref={refExperiences} className="experiences-section">
@@ -159,7 +168,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
                 'The Last Dollar (2026), featured in designboom: a 24/7 live-streamed sculpture fed by an internet-connected ATM. Built end-to-end, including a low-cost streaming infrastructure whose cost stays flat regardless of audience size.',
                 {
                   achievement:
-                    'Launched 3 artistic website with e-commerce functionalities respecting (very) short deadlines. These websites include:',
+                    'Launched 3 artistic websites with e-commerce functionality on (very) short deadlines. These websites include:',
                   subElements: [
                     'The Undrinkable Can',
                     'The American Roulette',
@@ -168,9 +177,9 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
                 },
               ]}
               responsibilities={[
-                'Delivered high-velocity e-commerce websites, managing fast prototyping and launches to meet tight artistic deadlines.',
-                'Implemented payment (Stripe), IoT communication (MQTT) and scaling (Redis) to ensure smooth user experiences and scalable performance.',
-                'Collaborated closely with designers and artists to translate creative briefs into production-ready sites, and maintained deployments and monitoring.',
+                'Delivering e-commerce websites at high velocity, from fast prototyping to launch, to meet tight artistic deadlines.',
+                'Implementing payments (Stripe), IoT communication (MQTT), and caching (Redis) to keep the user experience smooth as traffic scales.',
+                'Working closely with designers and artists to translate creative briefs into production-ready sites, and maintaining deployments and monitoring.',
               ]}
               status="default"
               title="Lead Developer • QSTNMRK"
@@ -192,7 +201,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               keyAchievements={[
                 {
                   achievement:
-                    'Developed and launched 2 financial simulators using React and NestJS, leading to a 4% increase in conversion rates and generating qualified leads within a really competitive market. These simulators cover diverse aspects of the French tax system, including:',
+                    'Developed and launched 2 financial simulators using React and NestJS, leading to a 4% increase in conversion rates and generating qualified leads in a highly competitive market. These simulators cover diverse aspects of the French tax system, including:',
                   subElements: [
                     'Tax estimation for the French income tax (slice tax)',
                     'Analysis of the PINEL investment law',
@@ -335,7 +344,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           <ProjectItem
             date="May 2023"
             status="default"
-            title="Content based TV Show Recommendation Algorithm using NLP"
+            title="Content-Based TV Show Recommendation Algorithm using NLP"
             link="https://github.com/baptisteauduge/movies-recommendation-and-subtitles-analysis"
             tags={[
               'Natural Language Processing',
@@ -363,7 +372,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           <ProjectItem
             date="April 2023"
             status="default"
-            title="Git like version control system using C"
+            title="Git-like version control system using C"
             link="https://github.com/baptisteauduge/mygit"
             tags={[
               'C',
@@ -435,7 +444,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           <ProjectItem
             date="February 2024"
             status="default"
-            title="Vigenère Cipher Cracker using Index of Coincidence, Index of Coincidence Mutual and Person Correlation Coefficient in Python"
+            title="Vigenère Cipher Cracker using Index of Coincidence, Index of Coincidence Mutual and Pearson Correlation Coefficient in Python"
             link="https://github.com/baptisteauduge/vigenere-cipher-crack"
             tags={['Cryptography', 'Python', 'Algorithms', 'Cybersecurity']}
           >
@@ -457,7 +466,8 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           Crafted with ❤️ by Baptiste Audugé. Built using React and Vite for a
           smooth user experience, and deployed on Vercel for lightning-fast
           performance. This website's design is heavily influenced by the work
-          of <i>Brittany Chiang</i> a skilled UI designer and Software Engineer.
+          of <i>Brittany Chiang</i>, a skilled UI designer and software
+          engineer.
         </p>
         <br />
         <br />
