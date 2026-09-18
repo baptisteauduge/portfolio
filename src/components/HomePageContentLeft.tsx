@@ -139,11 +139,24 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               context="Global nuclear fuel cycle company (uranium mining to recycling)"
               link="https://www.orano.group/"
             />
+            {/* TODO: repoint this card's link at The Last Dollar (designboom
+                article or project page) once the public URL is available. */}
             <ExperienceItem
-              beginYear="2024"
+              beginYear="Jan 2024"
               endYear="Present"
-              tags={['React', 'NestJs', 'Stripe', 'MQTT', 'Redis']}
+              tags={[
+                'React',
+                'NestJs',
+                'Stripe',
+                'MQTT',
+                'Redis',
+                'Cloudflare',
+                'MediaMTX',
+                'HLS',
+                'SSE',
+              ]}
               keyAchievements={[
+                'The Last Dollar (2026), featured in designboom: a 24/7 live-streamed sculpture fed by an internet-connected ATM. Built end-to-end, including a low-cost streaming infrastructure whose cost stays flat regardless of audience size.',
                 {
                   achievement:
                     'Launched 3 artistic website with e-commerce functionalities respecting (very) short deadlines. These websites include:',
@@ -160,7 +173,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
                 'Collaborated closely with designers and artists to translate creative briefs into production-ready sites, and maintained deployments and monitoring.',
               ]}
               status="default"
-              title="Fullstack Developer • QSTNMRK"
+              title="Lead Developer • QSTNMRK"
               link="https://www.qstnmrk.com/"
             />
             <ExperienceItem
@@ -199,8 +212,8 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               link="https://www.logic-invest.com/simulateurs/per"
             />
             <ExperienceItem
-              beginYear="2022"
-              endYear="2024"
+              beginYear="Jun 2022"
+              endYear="Sep 2024"
               tags={[
                 'React',
                 'NestJs',
@@ -227,8 +240,8 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               link="https://www.monaliza.fr/"
             />
             <ExperienceItem
-              beginYear="2020"
-              endYear="2023"
+              beginYear="Nov 2020"
+              endYear="Jul 2022"
               tags={[
                 'React',
                 'Php',
