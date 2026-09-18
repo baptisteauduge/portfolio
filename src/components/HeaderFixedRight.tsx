@@ -19,11 +19,12 @@ export const HeaderFixedRight: React.FC<HeaderFixedRightProps> = ({
         <div className="title">
           <h1>Baptiste Audugé</h1>
           <h2>
-            Engineering Student at CentraleSupélec & Freelance Full-Stack
-            Developer
+            Engineering Student at CentraleSupélec | AI &amp; Forward Deployed
+            Engineering
           </h2>
           <p>
-            Open to work opportunities - Based in France - Available for remote
+            Seeking a 5.5-month internship beginning February/March 2027 — Asia,
+            US or Canada
           </p>
         </div>
         <nav>
