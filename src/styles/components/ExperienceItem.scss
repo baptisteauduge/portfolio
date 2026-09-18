@@ -114,6 +114,14 @@
       text-align: justify;
     }
 
+    .context {
+      font-size: 14px;
+      font-style: italic;
+      color: $color-text-secondary;
+      margin-top: -4px;
+      text-align: left;
+    }
+
     .tags {
       margin-top: 16px;
       display: flex;

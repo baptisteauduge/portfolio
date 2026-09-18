@@ -7,6 +7,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 interface ExperienceItemProps {
   beginYear: string;
   endYear: string;
+  context?: string;
   keyAchievements?: Array<
     string | { achievement: string; subElements: Array<string> }
   >;
@@ -21,6 +22,7 @@ interface ExperienceItemProps {
 export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   beginYear,
   endYear,
+  context,
   keyAchievements,
   responsibilities,
   additionalInformations,
@@ -48,6 +50,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
         <h3>
           {title} <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
         </h3>
+        {context ? <p className="context">{context}</p> : null}
         {keyAchievements?.length ? (
           <p className="key-achievements-title">
             <b>Key Achievements :</b>

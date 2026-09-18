@@ -111,6 +111,35 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           <h1 id="experiences">Professional Experiences</h1>
           <div className="experiences-container">
             <ExperienceItem
+              beginYear="Jul 2026"
+              endYear="Jan 2027"
+              tags={[
+                'PyTorch',
+                'Transformers',
+                'Neural ODE',
+                'Physics-Informed ML',
+                'Time Series',
+                'Python',
+                'SQL',
+                'Claude Code',
+                'MCP',
+              ]}
+              keyAchievements={[
+                'Asked to fix a production AI model used to plan well cleaning across uranium mines; traced its errors to an overlooked factor: interactions between neighboring wells.',
+                'Designed a new physics-informed model: studied the geology literature and derived its governing equations.',
+                'Built the data extraction (SQL, REST APIs) from the mine monitoring systems; found ~30% of legacy data silently imputed.',
+              ]}
+              responsibilities={[
+                'Implementing the model in PyTorch: a Transformer with spatio-temporal cross-attention coupled to a Neural ODE, trained on 10,000+ well time series spanning up to 20 years.',
+                'Working with operations and geology teams to turn an operational problem into a modeling approach.',
+                'Developing with Claude Code and MCP tooling.',
+              ]}
+              status="default"
+              title="Data Scientist Intern - Deep Learning & Generative AI • Orano"
+              context="Global nuclear fuel cycle company (uranium mining to recycling)"
+              link="https://www.orano.group/"
+            />
+            <ExperienceItem
               beginYear="2024"
               endYear="Present"
               tags={['React', 'NestJs', 'Stripe', 'MQTT', 'Redis']}
