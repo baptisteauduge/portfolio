@@ -47,10 +47,10 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           </b>
           <p>
             I did a double bachelor's degree in mathematics and computer science
-            at Sorbonne University, then joined CentraleSupélec, where I'm on a
-            gap year before my final engineering year. The mathematics side is
-            what I lean on most these days, usually when a model does something
-            I wasn't expecting.
+            at Sorbonne University, then joined CentraleSupélec, where I'm on
+            the first of two gap years, before my final engineering year. The
+            mathematics side is what I lean on most these days, usually when a
+            model does something I wasn't expecting.
           </p>
           <b>
             <FontAwesomeIcon icon={faMicrochip} />
@@ -61,10 +61,10 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             Transformers, Neural ODEs, and physics-informed models for
             time-series data. A lot of it is less glamorous than that sounds. I
             spend a good part of my time pulling data out of SQL databases and
-            REST APIs and checking what is really in it, then processing it with
-            Spark. I also use Claude Code and MCP tooling daily. On the web side
-            I work in Python, TypeScript, React, and NestJS, and I've written a
-            fair amount of C, C++, Java, and OCaml along the way.
+            REST APIs and checking what is really in it. I've also used Spark on
+            large-scale IoT logs. I use Claude Code and MCP tooling daily. On
+            the web side I work in Python, TypeScript, React, and NestJS, and
+            I've written a fair amount of C, C++, Java, and OCaml along the way.
           </p>
           <b>
             <FontAwesomeIcon icon={faUserTie} />
@@ -158,7 +158,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
                 'SSE',
               ]}
               keyAchievements={[
-                'The Last Dollar (2026), featured in designboom: a 24/7 live-streamed sculpture fed by an internet-connected ATM. Built end-to-end, including a low-cost streaming infrastructure whose cost stays flat regardless of audience size.',
+                'The Last Dollar (2026), featured in designboom: a 24/7 live-streamed sculpture fed by an internet-connected ATM. Built end-to-end, including a low-cost streaming infrastructure designed to keep cost flat regardless of audience size.',
                 {
                   achievement:
                     'Launched 3 artistic websites with e-commerce functionality on (very) short deadlines. These websites include:',
