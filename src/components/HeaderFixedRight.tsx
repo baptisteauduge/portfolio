@@ -2,7 +2,11 @@ import React from 'react';
 import 'styles/components/HeaderFixedRight.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEnvelope,
+  faPhone,
+  faFileArrowDown,
+} from '@fortawesome/free-solid-svg-icons';
 
 interface HeaderFixedRightProps {
   elements: Array<string>;
@@ -67,6 +71,17 @@ export const HeaderFixedRight: React.FC<HeaderFixedRightProps> = ({
           </a>
           <a href="tel:+33637623051" target="_blank">
             <FontAwesomeIcon icon={faPhone} />
+          </a>
+          {/* TODO: drop the PDF at public/Baptiste_Auduge_Resume.pdf. The href
+              is a plain string, so a missing file cannot break the build. */}
+          <a
+            className="resume-link"
+            href="/Baptiste_Auduge_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faFileArrowDown} />
+            <span>Resume</span>
           </a>
         </div>
       </div>

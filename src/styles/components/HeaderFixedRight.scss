@@ -123,5 +123,28 @@
         color: $color-text-primary;
       }
     }
+
+    .resume-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border: 1px solid $accent300;
+      border-radius: 4px;
+      color: $accent400;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        transform: scale(1);
+        color: $accent400;
+        background-color: $accent200;
+      }
+
+      svg {
+        font-size: 14px;
+      }
+    }
   }
 }
