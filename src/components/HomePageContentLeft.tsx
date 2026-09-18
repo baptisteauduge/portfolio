@@ -33,77 +33,71 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           </h2>
           <b>
             <FontAwesomeIcon icon={faRocket} />
-            Driven by Curiosity, Fueled by Innovation
+            Where It Started
           </b>
           <p>
-            From a young age, I've been fascinated by the way technology can
-            solve problems and push boundaries. This passion led me into
-            programming at the age of 12, and I have been building things ever
-            since. What I enjoy most has not changed: taking a problem someone
-            actually has, understanding it deeply enough to model it, and
-            shipping something that works in production.
+            I started programming at 12, mostly out of curiosity, and never
+            really stopped. What I like about it hasn't changed much since. I
+            want to understand a problem properly before writing anything, and
+            then I want the result to actually run, not just demo well.
           </p>
           <b>
             <FontAwesomeIcon icon={faBook} />
             My Academic Journey
           </b>
           <p>
-            I earned a double bachelor's degree in mathematics and computer
-            science at Sorbonne University, then joined CentraleSupélec, where
-            I'm currently on a gap year before my final engineering year. That
-            foundation is what lets me read a scientific paper, derive the
-            equations that govern a physical system, and turn them into a model
-            that runs.
+            I did a double bachelor's degree in mathematics and computer science
+            at Sorbonne University, then joined CentraleSupélec, where I'm on a
+            gap year before my final engineering year. The mathematics side is
+            what I lean on most these days, usually when a model does something
+            I wasn't expecting.
           </p>
           <b>
             <FontAwesomeIcon icon={faMicrochip} />
             Technical Expertise
           </b>
           <p>
-            My core work today is applied AI: deep learning in PyTorch,
-            Transformers and Neural ODEs, physics-informed modeling, and
-            time-series problems where the data is messy and the domain matters.
-            Around the model, I handle the unglamorous half — extracting data
-            over SQL and REST APIs, auditing what it actually contains, and
-            processing it at scale with Spark. I also develop with Claude Code
-            and MCP tooling day to day. Alongside that, I'm a full-stack
-            engineer in Python, TypeScript, React, and NestJS, and I'm
-            comfortable in C, C++, Java, and OCaml.
+            Most of my work right now is applied AI: deep learning in PyTorch,
+            Transformers, Neural ODEs, and physics-informed models for
+            time-series data. A lot of it is less glamorous than that sounds. I
+            spend a good part of my time pulling data out of SQL databases and
+            REST APIs and checking what is really in it, then processing it with
+            Spark. I also use Claude Code and MCP tooling daily. On the web side
+            I work in Python, TypeScript, React, and NestJS, and I've written a
+            fair amount of C, C++, Java, and OCaml along the way.
           </p>
           <b>
             <FontAwesomeIcon icon={faUserTie} />
             Professional Experience
           </b>
           <p>
-            I'm currently a data science intern at Orano, where I work on a
-            production model used to plan operations across uranium mines, side
-            by side with the operations and geology teams who rely on it. In
-            parallel, I lead development at QSTNMRK, shipping artistic
-            e-commerce and live-streaming projects end to end. Before that,
-            freelance work taught me the part that no course does: sitting with
-            a client, turning a vague business need into a specification, and
-            being accountable for what happens after it goes live.
+            I'm currently a data science intern at Orano, on a model used to
+            plan operations across uranium mines. Most of what I've learned
+            there came from the operations and geology teams, who understand the
+            problem far better than I did when I arrived. I also work as lead
+            developer at QSTNMRK, on artistic e-commerce and live-streaming
+            projects. Before that I did freelance work for a few years, which is
+            where I learned to talk to clients, write down what they actually
+            need, and handle things breaking after delivery.
           </p>
           <b>
             <FontAwesomeIcon icon={faHeart} />
             Areas of Interest
           </b>
           <p>
-            I'm most interested in AI that has to survive contact with the real
-            world: physics-informed and time-series modeling, anomaly detection
-            on large-scale sensor data, and the agent and MCP tooling that is
-            changing how software gets built. High performance computing and
-            embedded systems keep pulling me in too, and I look for projects and
-            research that let me go deeper into all of it.
+            I'm drawn to AI that has to work outside a notebook:
+            physics-informed and time-series modeling, anomaly detection on
+            sensor data, and the agent and MCP tooling that is changing how
+            software gets written. High performance computing and embedded
+            systems interest me too, though I've spent less time on them so far.
           </p>
           <b>
             <FontAwesomeIcon icon={faMusic} />
             Beyond the Code
           </b>
           <p>
-            While I'm deeply passionate about technology, I value a well-rounded
-            life. My interests extend beyond computer science: I DJ, I play bass
-            guitar, and I cook.
+            Outside of computer science, I DJ, play bass guitar, and cook. I'd
+            rather not spend all my time in front of a screen.
           </p>
           <b>
             <FontAwesomeIcon icon={faEye} />
@@ -111,10 +105,10 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           </b>
           <p>
             I'm looking for a 5.5-month internship starting in February or March
-            2027, in Asia, the US, or Canada, as an AI forward deployed
-            engineer: sitting close to the people with the problem, and building
-            the model and the software that solves it. If that sounds like your
-            team, I'd love to hear from you.
+            2027, in Asia, the US, or Canada. What interests me is the forward
+            deployed side of AI, being close to the people who have the problem
+            rather than a few teams away from them. If you're hiring for
+            something like that, I'd be glad to talk.
           </p>
         </div>
         <div ref={refExperiences} className="experiences-section">
