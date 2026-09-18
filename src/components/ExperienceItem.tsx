@@ -17,6 +17,12 @@ interface ExperienceItemProps {
   status: 'default' | 'lowOpacity';
   title: string;
   link: string;
+  /**
+   * Extra destinations worth naming, rendered as real anchors. A card with a
+   * link row drops its role="link": a link must not contain focusable
+   * descendants, and the anchors already give keyboard and crawler access.
+   */
+  links?: Array<{ label: string; url: string }>;
 }
 
 export const ExperienceItem: React.FC<ExperienceItemProps> = ({
@@ -30,17 +36,20 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   status,
   title,
   link,
+  links,
 }) => {
   const open = () => window.open(link, '_blank', 'noopener,noreferrer');
+  const hasLinkRow = Boolean(links?.length);
 
   return (
     <div
       className={`experience-item ${status}`}
-      role="link"
-      tabIndex={0}
-      aria-label={`${title} (opens in a new tab)`}
+      role={hasLinkRow ? undefined : 'link'}
+      tabIndex={hasLinkRow ? undefined : 0}
+      aria-label={hasLinkRow ? undefined : `${title} (opens in a new tab)`}
       onClick={() => open()}
       onKeyDown={(event) => {
+        if (hasLinkRow) return;
         if (event.key !== 'Enter' && event.key !== ' ') return;
         event.preventDefault();
         open();
@@ -118,6 +127,27 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
             );
           })}
         </ul>
+        {links?.length ? (
+          <div className="links">
+            {links.map(({ label, url }, index) => {
+              return (
+                <a
+                  key={index}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  {label}{' '}
+                  <FontAwesomeIcon
+                    icon={faArrowUpRightFromSquare}
+                    aria-hidden="true"
+                  />
+                </a>
+              );
+            })}
+          </div>
+        ) : null}
         <div className="tags">
           {tags.map((tag, index) => {
             return <Tag key={index}>{tag}</Tag>;

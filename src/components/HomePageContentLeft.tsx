@@ -177,6 +177,13 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               status="default"
               title="Lead Developer • QSTNMRK"
               link="https://www.designboom.com/art/internet-living-sculpture-one-dollar-time-qstnmrk-the-last-dollar/"
+              links={[
+                { label: 'The Last Dollar', url: 'https://thelastdollar.art' },
+                {
+                  label: 'designboom feature',
+                  url: 'https://www.designboom.com/art/internet-living-sculpture-one-dollar-time-qstnmrk-the-last-dollar/',
+                },
+              ]}
             />
             {/* TODO: Logic Invest is the only experience shown in years. What
                 are the exact start and end months? */}
@@ -264,6 +271,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           <h3 className="project-group">AI &amp; Data</h3>
           {/* TODO: add the generative AI project (RAG, agent or MCP
               server) here, at the top of this group. */}
+          {/* TODO: no public repo found for this one. Add `link` if it can be shared (the Bouygues Telecom work may not be). */}
           <ProjectItem
             date="May 2024"
             status="default"
@@ -283,6 +291,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               features derived from the logs. Built with Bouygues Telecom.
             </p>
           </ProjectItem>
+          {/* TODO: no public repo found. Add `link` if you push this one. */}
           <ProjectItem
             date="June 2024"
             status="default"
@@ -303,6 +312,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               rolling-window validation.
             </p>
           </ProjectItem>
+          {/* TODO: no public repo found. Add `link` if you push this one. */}
           <ProjectItem
             date="November 2025"
             status="default"

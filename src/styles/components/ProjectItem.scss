@@ -123,6 +123,15 @@
       text-align: justify;
     }
 
+    .thumbnail {
+      margin-top: 16px;
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+      border: 1px solid rgba(148, 163, 184, .15);
+    }
+
     .tags {
       margin-top: 16px;
       display: flex;

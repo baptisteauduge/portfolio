@@ -11,6 +11,13 @@ interface ProjectItemProps {
   status: 'default' | 'lowOpacity';
   title: string;
   link?: string;
+  /**
+   * Optional thumbnail, e.g. { src: '/projects/picross.png', alt: '…' }.
+   * Drop the file in public/ and reference it by absolute path: a plain
+   * string keeps a missing file from breaking the build, and the image
+   * removes itself if it fails to load.
+   */
+  image?: { src: string; alt: string };
 }
 
 export const ProjectItem: React.FC<ProjectItemProps> = ({
@@ -20,7 +27,10 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
   status,
   title,
   link,
+  image,
 }) => {
+  const [imageFailed, setImageFailed] = React.useState(false);
+
   const open = () => {
     if (link) window.open(link, '_blank', 'noopener,noreferrer');
   };
@@ -51,6 +61,16 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
           )}
         </h4>
         {children}
+        {image && !imageFailed ? (
+          <img
+            className="thumbnail"
+            src={image.src}
+            alt={image.alt}
+            loading="lazy"
+            decoding="async"
+            onError={() => setImageFailed(true)}
+          />
+        ) : null}
         <div className="tags">
           {tags.map((tag, index) => {
             return <Tag key={index}>{tag}</Tag>;
