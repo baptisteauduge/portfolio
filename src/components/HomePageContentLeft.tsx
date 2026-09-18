@@ -148,8 +148,6 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               context="Global nuclear fuel cycle company (uranium mining to recycling)"
               link="https://www.orano.group/"
             />
-            {/* TODO: repoint this card's link at The Last Dollar (designboom
-                article or project page) once the public URL is available. */}
             <ExperienceItem
               beginYear="Jan 2024"
               endYear="Present"
@@ -183,7 +181,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
               ]}
               status="default"
               title="Lead Developer • QSTNMRK"
-              link="https://www.qstnmrk.com/"
+              link="https://www.designboom.com/art/internet-living-sculpture-one-dollar-time-qstnmrk-the-last-dollar/"
             />
             <ExperienceItem
               beginYear="2023"

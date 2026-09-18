@@ -84,8 +84,6 @@ export const HeaderFixedRight: React.FC<HeaderFixedRightProps> = ({
           <a href="tel:+33637623051" aria-label="Call +33 6 37 62 30 51">
             <FontAwesomeIcon icon={faPhone} aria-hidden="true" />
           </a>
-          {/* TODO: drop the PDF at public/Baptiste_Auduge_Resume.pdf. The href
-              is a plain string, so a missing file cannot break the build. */}
           <a
             className="resume-link"
             href="/Baptiste_Auduge_Resume.pdf"
