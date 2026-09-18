@@ -21,18 +21,35 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
   title,
   link,
 }) => {
+  const open = () => {
+    if (link) window.open(link, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div
-      className={`project-item ${status}`}
-      onClick={() => {
-        if (link) window.open(link, '_blank');
+      className={`project-item ${status}${link ? ' clickable' : ''}`}
+      role={link ? 'link' : undefined}
+      tabIndex={link ? 0 : undefined}
+      aria-label={link ? `${title} (opens in a new tab)` : undefined}
+      onClick={() => open()}
+      onKeyDown={(event) => {
+        if (!link) return;
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        open();
       }}
     >
       <div className="content-column">
         <p className="date">{date}</p>
-        <h3>
-          {title} {link && <FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
-        </h3>
+        <h4>
+          {title}{' '}
+          {link && (
+            <FontAwesomeIcon
+              icon={faArrowUpRightFromSquare}
+              aria-hidden="true"
+            />
+          )}
+        </h4>
         {children}
         <div className="tags">
           {tags.map((tag, index) => {

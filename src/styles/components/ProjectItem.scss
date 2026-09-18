@@ -8,9 +8,17 @@
   padding: 32px;
   border-radius: 8px;
   transition: all .2s cubic-bezier(.4, 0, .2, 1);
-  cursor: pointer;
 
-  &:hover .content-column h3 {
+  &.clickable {
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent400;
+    outline-offset: 2px;
+  }
+
+  &:hover .content-column h4 {
     color: $accent400;
   }
 
@@ -29,7 +37,7 @@
       box-shadow: none;
     }
 
-    h3 {
+    h4 {
       color: $accent300 !important;
     }
   }
@@ -42,7 +50,7 @@
       box-shadow: none;
     }
 
-    h3 {
+    h4 {
       color: $accent300 !important;
     }
   }
@@ -90,7 +98,7 @@
     }
 
 
-    h3 {
+    h4 {
       font-size: 18px;
       line-height: 24px;
       font-weight: 500;

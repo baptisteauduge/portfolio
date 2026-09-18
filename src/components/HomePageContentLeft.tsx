@@ -28,9 +28,9 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
     <div className="home-page-content-left">
       <main>
         <div ref={refAbout} className="about-section">
-          <h1 id="about">
+          <h2 id="about">
             Bridging the Gap: Between Academia and Real-World Development
-          </h1>
+          </h2>
           <b>
             <FontAwesomeIcon icon={faRocket} />
             Driven by Curiosity, Fueled by Innovation
@@ -117,7 +117,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           </p>
         </div>
         <div ref={refExperiences} className="experiences-section">
-          <h1 id="experiences">Professional Experiences</h1>
+          <h2 id="experiences">Professional Experiences</h2>
           <div className="experiences-container">
             <ExperienceItem
               beginYear="Jul 2026"
@@ -277,7 +277,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
           </div>
         </div>
         <div ref={refProjects} className="projects-section">
-          <h1 id="projects">Projects</h1>
+          <h2 id="projects">Projects</h2>
           <h3 className="project-group">AI &amp; Data</h3>
           {/* TODO: add the generative AI project (RAG, agent or MCP
               server) here, at the top of this group. */}
@@ -461,6 +461,8 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
             </p>
           </ProjectItem>
         </div>
+      </main>
+      <footer>
         <br />
         <p className="credits">
           Crafted with ❤️ by Baptiste Audugé. Built using React and Vite for a
@@ -472,7 +474,7 @@ export const HomePageContentLeft: React.FC<HomePageContentLeftProps> = ({
         <br />
         <br />
         <br />
-      </main>
+      </footer>
     </div>
   );
 };

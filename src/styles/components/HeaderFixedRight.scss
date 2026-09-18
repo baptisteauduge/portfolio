@@ -40,12 +40,15 @@
       margin-bottom: 8px;
     }
 
-    h2 {
+    .subtitle {
       margin-top: 8px;
       font-weight: 500;
       font-size: 20px;
       margin-bottom: 16px;
       letter-spacing: -0.025em;
+      color: inherit;
+      line-height: 1.2;
+      max-width: none;
     }
 
     p {
@@ -55,6 +58,13 @@
       margin-bottom: 24px;
       max-width: 400px;
     }
+  }
+
+  .nav-element:focus-visible,
+  .social a:focus-visible {
+    outline: 2px solid $accent400;
+    outline-offset: 4px;
+    border-radius: 4px;
   }
 
   nav {

@@ -31,11 +31,19 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   title,
   link,
 }) => {
+  const open = () => window.open(link, '_blank', 'noopener,noreferrer');
+
   return (
     <div
       className={`experience-item ${status}`}
-      onClick={() => {
-        window.open(link, '_blank');
+      role="link"
+      tabIndex={0}
+      aria-label={`${title} (opens in a new tab)`}
+      onClick={() => open()}
+      onKeyDown={(event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        open();
       }}
     >
       <div className="date-column">
@@ -48,7 +56,8 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
           {beginYear} - {endYear}
         </p>
         <h3>
-          {title} <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          {title}{' '}
+          <FontAwesomeIcon icon={faArrowUpRightFromSquare} aria-hidden="true" />
         </h3>
         {context ? <p className="context">{context}</p> : null}
         {keyAchievements?.length ? (

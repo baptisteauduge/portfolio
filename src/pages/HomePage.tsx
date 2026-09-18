@@ -9,8 +9,8 @@ const options = {
 };
 
 export const HomePage = () => {
-  const [cursorPosition, setCursorPosition] = React.useState({ x: 0, y: 0 });
-  useSetCursorPosition(setCursorPosition);
+  const cursorLightRef = React.useRef<HTMLDivElement>(null);
+  useSetCursorPosition(cursorLightRef);
   const { ref: refAbout, inView: inViewAbout } = useInView(options);
   const { ref: refExperiences, inView: inViewExperiences } = useInView(options);
   const { ref: refProjects, inView: inViewProjects } = useInView(options);
@@ -23,12 +23,7 @@ export const HomePage = () => {
 
   return (
     <div className="home-page">
-      <div
-        className="background-cursor-light"
-        style={{
-          background: `radial-gradient(600px at ${cursorPosition.x}px ${cursorPosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
-        }}
-      ></div>
+      <div ref={cursorLightRef} className="background-cursor-light"></div>
       <div className="page-centering">
         <HeaderFixedRight
           elements={['about', 'experiences', 'projects']}

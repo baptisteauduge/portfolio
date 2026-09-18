@@ -50,8 +50,12 @@
     }
   }
 
-  h1 {
+  h2 {
     color: $color-text-secondary;
+    // Section titles were <h1> before the heading hierarchy was fixed; these
+    // two lines reproduce the user-agent h1 metrics so nothing moves.
+    font-size: 2em;
+    margin: 0.67em 0;
 
     @include breakpoint(tablet) {
       font-size: 24px;

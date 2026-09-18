@@ -10,6 +10,11 @@
   transition: all .2s cubic-bezier(.4, 0, .2, 1);
   cursor: pointer;
 
+  &:focus-visible {
+    outline: 2px solid $accent400;
+    outline-offset: 2px;
+  }
+
   &:hover .content-column h3 {
     color: $accent400;
   }
