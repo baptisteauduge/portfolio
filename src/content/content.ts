@@ -13,6 +13,9 @@ export type LinkItem = { label: string; href: string };
 export type Fact = { term: string; detail: string };
 
 export type FeaturedMedia =
+  /** Live HLS stream, shown in a 4:3 frame (see Media.module.css). */
+  | { kind: 'stream'; src: string; poster: string; label: string }
+  /** Muted video loop file, shown in a 16:10 frame. */
   | { kind: 'video'; src: string; poster: string; label: string }
   | { kind: 'image'; src: string; alt: string; width: number; height: number };
 
@@ -67,6 +70,8 @@ export const ui = {
   skipLink: 'Skip to content',
   navLabel: 'Sections',
   tagsLabel: 'Technologies',
+  pause: 'Pause',
+  play: 'Play',
 };
 
 export const links = {
@@ -113,13 +118,18 @@ export const hero = {
 export const featured = {
   label: '01 — Featured work',
   aside: 'QSTNMRK, 2026',
-  // TODO(asset): add the Last Dollar loop. Put the files in public/ and set
-  // media, for example:
-  //   { kind: 'video', src: '/the-last-dollar.mp4', poster: '/the-last-dollar.jpg',
-  //     label: 'The Last Dollar sculpture on its live stream' }
-  // or { kind: 'image', src: '/the-last-dollar.jpg', alt: '…', width: 1600, height: 1000 }.
-  // Frame ratio is 16:10. While media is null, the striped placeholder shows.
-  media: null as FeaturedMedia | null,
+  // The live stream plays muted while the figure is on screen. The poster is
+  // a still from the stream, shown before it starts, under reduced motion and
+  // in browsers without native HLS (Firefox). Other options: a { kind: 'video' }
+  // loop file or a { kind: 'image' } in a 16:10 frame; null shows the
+  // striped placeholder.
+  media: {
+    kind: 'stream',
+    src: 'https://live.thelastdollar.art/live/index.m3u8',
+    poster: '/the-last-dollar-live.webp',
+    label:
+      'The Last Dollar live stream: an ATM standing on a pile of dollar bills',
+  } as FeaturedMedia | null,
   placeholder: '[ muted video loop — live stream still of the sculpture ]',
   caption: 'Fig. 1 — The Last Dollar, streaming 24/7.',
   title: [{ em: 'The Last Dollar' }] satisfies Rich,

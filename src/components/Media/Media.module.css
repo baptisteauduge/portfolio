@@ -15,11 +15,79 @@
   color: var(--mute);
 }
 
-.frame {
+.image {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   background: var(--ph);
+}
+
+.videoFrame,
+.streamFrame {
+  position: relative;
+  overflow: hidden;
+  background: var(--ph);
+}
+
+.videoFrame {
+  aspect-ratio: 16 / 10;
+}
+
+.streamFrame {
+  aspect-ratio: 4 / 3;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+ * The Last Dollar stream is a 16:9 picture (1920 x 1080) whose scene sits in
+ * a centred band 1410 px wide, with black bars either side. Scale the video so
+ * that band fills the 4:3 frame's width, and keep its 16:9 shape: the frame
+ * then crops the bars and about 1% top and bottom. Poster and video crop alike.
+ */
+.streamFrame .video {
+  inset: auto;
+  top: 50%;
+  left: 50%;
+  width: calc(100% * 1920 / 1410);
+  height: calc(100% * 1920 / 1410 * (9 / 16) / (3 / 4));
+  transform: translate(-50%, -50%);
+}
+
+.caption {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--mute);
+}
+
+/* A text button in the style of the site's links. The vertical padding gives
+   a bigger hit area without changing the caption's height. */
+.toggle {
+  flex: none;
+  margin: -6px 0;
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+
+.toggle:hover {
+  color: var(--acc);
 }

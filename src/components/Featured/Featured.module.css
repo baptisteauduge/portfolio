@@ -11,13 +11,6 @@
   min-width: min(100%, 300px);
 }
 
-.caption {
-  margin-top: 12px;
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--mute);
-}
-
 .body {
   flex: 1 1 320px;
   padding-bottom: 30px;

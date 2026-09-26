@@ -18,10 +18,12 @@ export function Featured() {
         variant="featured"
       />
       <div className={styles.lead}>
-        <figure className={styles.figure}>
-          <Media media={featured.media} placeholder={featured.placeholder} />
-          <figcaption className={styles.caption}>{featured.caption}</figcaption>
-        </figure>
+        <Media
+          media={featured.media}
+          placeholder={featured.placeholder}
+          caption={featured.caption}
+          className={styles.figure}
+        />
         <div className={styles.body}>
           <h2 id="featured-h" className={styles.title}>
             <Rich value={featured.title} />

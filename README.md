@@ -9,7 +9,7 @@ styled with CSS Modules, and hosted on [Vercel](https://vercel.com/).
 ## Editing
 
 All the copy lives in [`src/content/content.ts`](src/content/content.ts); components only handle layout.
-The Last Dollar figure shows a placeholder until `featured.media` is set there (see the TODO).
+The Last Dollar figure plays the sculpture's live stream (`featured.media`), muted and only while on screen.
 
 ## Commands
 
