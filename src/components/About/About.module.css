@@ -1,0 +1,29 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 48px;
+}
+
+.title {
+  flex: 1 1 260px;
+  margin: 0;
+  font-size: clamp(32px, 3.6vw, 44px);
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.body {
+  flex: 999 1 0;
+  min-width: min(100%, 30rem);
+  max-width: 64ch;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: clamp(18px, 1.4vw, 20px);
+  text-wrap: pretty;
+}
+
+.paragraph {
+  margin: 0;
+}

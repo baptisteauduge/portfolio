@@ -1,0 +1,96 @@
+.lead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 48px;
+  align-items: flex-end;
+}
+
+.figure {
+  margin: 0;
+  flex: 1 1 560px;
+  min-width: min(100%, 300px);
+}
+
+.caption {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--mute);
+}
+
+.body {
+  flex: 1 1 320px;
+  padding-bottom: 30px;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(40px, 5vw, 58px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.text {
+  margin: 22px 0 0;
+  max-width: 36ch;
+  font-size: clamp(18px, 1.5vw, 20px);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.press {
+  margin: 14px 0 0;
+  color: var(--mute);
+}
+
+.links {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+.link {
+  padding: 6px 0;
+}
+
+.accent {
+  color: var(--acc);
+}
+
+.highlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 48px;
+  align-items: flex-start;
+}
+
+.highlightBody {
+  flex: 1 1 320px;
+}
+
+.highlightTitle {
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.highlightText {
+  margin: 18px 0 0;
+  max-width: 38ch;
+  text-wrap: pretty;
+}
+
+.roleLink {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--acc);
+  padding: 6px 0;
+}

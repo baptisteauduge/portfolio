@@ -1,0 +1,65 @@
+/* Design tokens from the Claude Design export (accent: oxblood). */
+:root {
+  --bg: #f6f3ee;
+  --ink: #1c1a16;
+  --mute: #5b554b;
+  --line: #d8d0c2;
+  --card: #fbf9f5;
+  --ph: #ece6db;
+  --ph2: #e3dccf;
+  --acc: oklch(0.47 0.14 28);
+
+  --serif: var(--font-serif), Georgia, serif;
+  --mono: var(--font-mono), monospace;
+  --max-width: 1200px;
+  --gutter: clamp(20px, 5vw, 64px);
+
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(17px, 0.35vw + 15.5px, 19px);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: var(--acc);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--acc);
+  color: var(--bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}

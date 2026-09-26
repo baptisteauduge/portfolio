@@ -1,0 +1,19 @@
+.icons {
+  display: flex;
+  gap: 6px;
+  font-size: 22px;
+}
+
+.link {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+
+/* Same box as the Font Awesome glyph it replaces: 1em tall, natural width. */
+.icon {
+  height: 1em;
+  width: auto;
+  overflow: visible;
+}
