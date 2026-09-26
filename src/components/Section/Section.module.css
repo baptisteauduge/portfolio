@@ -1,0 +1,4 @@
+.section {
+  padding-bottom: clamp(64px, 8vw, 96px);
+  scroll-margin-top: 72px;
+}

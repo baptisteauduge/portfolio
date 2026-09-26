@@ -1,0 +1,40 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px 28px;
+  flex-wrap: wrap;
+}
+
+.hero {
+  margin-top: clamp(32px, 4vw, 44px);
+}
+
+.footer {
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+.cta {
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  padding: 15px 22px;
+  font-family: var(--mono);
+  font-size: 14px;
+  transition: background 0.15s;
+}
+
+/* Two classes, so it outranks the global a:hover colour. */
+.row .cta:hover {
+  background: var(--acc);
+  color: var(--bg);
+}
+
+.resume {
+  font-family: var(--mono);
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+.pushRight {
+  margin-left: auto;
+}

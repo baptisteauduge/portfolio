@@ -1,0 +1,75 @@
+.heading {
+  margin: 0;
+  font-size: clamp(32px, 3.6vw, 44px);
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.groupTitle {
+  margin: clamp(36px, 4vw, 48px) 0 16px;
+  font-size: clamp(22px, 2vw, 26px);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.groupTitle.firstGroup {
+  margin-top: clamp(28px, 3.5vw, 40px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 16px;
+}
+
+.coursework {
+  margin-top: clamp(36px, 4vw, 48px);
+}
+
+.courseworkTitle {
+  margin: 0 0 4px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.courseworkList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.course {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.courseDate {
+  flex: 0 0 100px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--mute);
+  padding-top: 4px;
+}
+
+.courseBody {
+  flex: 999 1 0;
+  min-width: min(100%, 24rem);
+}
+
+.courseLink {
+  font-size: 19px;
+}
+
+.courseText {
+  margin: 2px 0 0;
+  font-size: 16px;
+  color: var(--mute);
+}
