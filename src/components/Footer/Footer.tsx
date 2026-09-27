@@ -1,4 +1,4 @@
-import { contact, links } from '@/content/content';
+import { NE, contact, links } from '@/content/content';
 import { ContactLinks } from '@/components/ContactLinks/ContactLinks';
 import { ExternalLink } from '@/components/ExternalLink/ExternalLink';
 import { BrandIcon } from '@/components/SocialIcons/SocialIcons';
@@ -35,7 +35,7 @@ export function Footer() {
                 {links[icon].name}
               </span>
               <span aria-hidden="true" className={styles.glyph}>
-                ↗
+                {NE}
               </span>
             </ExternalLink>
           ))}

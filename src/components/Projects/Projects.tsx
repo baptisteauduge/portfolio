@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { projects, ui } from '@/content/content';
+import { NE, projects, ui } from '@/content/content';
 import { Section } from '@/components/Section/Section';
 import { SectionLabel } from '@/components/SectionLabel/SectionLabel';
 import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
@@ -49,7 +49,7 @@ export function Projects() {
               </span>
               <div className={`desktop-only ${styles.courseBody}`}>
                 <ExternalLink href={item.href} className={styles.courseLink}>
-                  {item.title}
+                  {`${item.title} ${NE}`}
                 </ExternalLink>
                 <p className={styles.courseText}>{item.text}</p>
               </div>
@@ -59,9 +59,9 @@ export function Projects() {
                 className={`mobile-only ${styles.courseRow}`}
               >
                 <span className={styles.courseRowTitle}>
-                  <span>{item.title.replace(/\s*↗$/, '')}</span>
+                  <span>{item.title}</span>
                   <span aria-hidden="true" className={styles.courseArrow}>
-                    ↗
+                    {NE}
                   </span>
                 </span>
                 <span className={styles.courseRowText}>
