@@ -1,4 +1,4 @@
-import { featured } from '@/content/content';
+import { NE, featured } from '@/content/content';
 import { Section } from '@/components/Section/Section';
 import { SectionLabel } from '@/components/SectionLabel/SectionLabel';
 import { FactList } from '@/components/FactList/FactList';
@@ -50,7 +50,7 @@ export function Featured() {
               >
                 <Variant desktop={link.label} mobile={link.shortLabel} />
                 <span aria-hidden="true" className="mobile-only">
-                  ↗
+                  {NE}
                 </span>
               </ExternalLink>
             ))}

@@ -1,5 +1,5 @@
 import type { Role } from '@/content/content';
-import { experience, ui } from '@/content/content';
+import { NE, experience, ui } from '@/content/content';
 import { Section } from '@/components/Section/Section';
 import { SectionLabel } from '@/components/SectionLabel/SectionLabel';
 import { TagList } from '@/components/TagList/TagList';
@@ -73,7 +73,9 @@ function RoleEntry({ role, index, nested = false }: EntryProps) {
   // into the body: after the summary for main roles, after the tags otherwise.
   const phoneLink = href && (
     <ExternalLink href={href}>
-      {nested ? ui.site : `${new URL(href).hostname.replace(/^www\./, '')} ↗`}
+      {nested
+        ? ui.site
+        : `${new URL(href).hostname.replace(/^www\./, '')} ${NE}`}
     </ExternalLink>
   );
 

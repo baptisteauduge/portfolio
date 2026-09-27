@@ -51,12 +51,20 @@ export type Project = {
 
 export type CourseworkItem = {
   date: string;
+  /** Link text; the arrow is added where it is shown. */
   title: string;
   href: string;
   text: string;
   /** Shorter description for the phone layout. */
   textShort?: string;
 };
+
+/**
+ * The north-east arrow followed by U+FE0E, which asks for its text glyph.
+ * Neither site font has "↗", and without the selector iOS falls back to the
+ * emoji. Use NE wherever the arrow appears.
+ */
+export const NE = '↗\uFE0E';
 
 export const site = {
   url: 'https://www.auduge.com',
@@ -92,7 +100,7 @@ export const ui = {
   /** Marks the current role in the phone Experience list. */
   current: '●',
   /** Company link at the end of a freelance role on phones. */
-  site: 'Site ↗',
+  site: `Site ${NE}`,
 };
 
 export const links = {
@@ -183,12 +191,12 @@ export const featured = {
   text: 'A 24/7 live-streamed sculpture fed by an internet-connected ATM. I built it end to end, including a low-cost streaming stack whose cost stays flat regardless of audience size.',
   press: ['Featured in ', { em: 'designboom' }, '.'] satisfies Rich,
   primaryLink: {
-    label: 'Watch it live — thelastdollar.art ↗',
+    label: `Watch it live — thelastdollar.art ${NE}`,
     shortLabel: 'Watch it live',
     href: 'https://thelastdollar.art',
   },
   secondaryLink: {
-    label: 'Read the designboom feature ↗',
+    label: `Read the designboom feature ${NE}`,
     shortLabel: 'Read the designboom feature',
     href: 'https://www.designboom.com/art/internet-living-sculpture-one-dollar-time-qstnmrk-the-last-dollar/',
   },
@@ -354,7 +362,7 @@ export const experience = {
 };
 
 const privateSource = { label: 'Private' };
-const code = (href: string) => ({ label: 'Code ↗', href });
+const code = (href: string) => ({ label: `Code ${NE}`, href });
 
 export const projects = {
   label: '04 — Projects',
@@ -424,7 +432,7 @@ export const projects = {
     items: [
       {
         date: 'Feb 2024',
-        title: 'Vigenère Cipher Cracker ↗',
+        title: 'Vigenère Cipher Cracker',
         href: 'https://github.com/baptisteauduge/vigenere-cipher-crack',
         text: 'Recovers key length by index of coincidence and the key by Pearson correlation. Python, course 3I024.',
         textShort:
@@ -432,7 +440,7 @@ export const projects = {
       },
       {
         date: 'Jun 2023',
-        title: 'Stack-Based Language Interpreter ↗',
+        title: 'Stack-Based Language Interpreter',
         href: 'https://github.com/baptisteauduge/interpreter-pf2023',
         text: 'OCaml interpreter for PF23, a small PostScript-inspired language with functions and conditionals.',
         textShort:
