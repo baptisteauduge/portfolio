@@ -87,3 +87,76 @@
   color: var(--acc);
   padding: 6px 0;
 }
+
+@media (max-width: 639px) {
+  .lead,
+  .highlight {
+    display: block;
+  }
+
+  /* Edge to edge: out of the page gutter. */
+  .figure {
+    min-width: 0;
+    margin: 16px calc(-1 * var(--gutter)) 0;
+  }
+
+  .body {
+    padding-bottom: 0;
+  }
+
+  .title {
+    margin-top: 24px;
+    font-size: 40px;
+  }
+
+  .copy {
+    margin-top: 16px;
+    text-wrap: pretty;
+  }
+
+  .text,
+  .press {
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+
+  .press::before {
+    content: ' ';
+  }
+
+  /* Row links: full-width, ruled, with a trailing arrow. */
+  .links {
+    gap: 0;
+    margin-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+
+  .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 52px;
+    padding: 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+  }
+
+  .highlightTitle {
+    margin-top: 16px;
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .highlightText {
+    margin-top: 14px;
+    max-width: none;
+  }
+
+  /* Experience sits just below, and on phones it is a tap away. */
+  .roleLink {
+    display: none;
+  }
+}

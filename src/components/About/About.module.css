@@ -27,3 +27,26 @@
 .paragraph {
   margin: 0;
 }
+
+@media (max-width: 639px) {
+  .row {
+    display: block;
+  }
+
+  .title {
+    margin-top: 16px;
+  }
+
+  /* One flowing line: "Math, applied AI, and systems that ship." */
+  .title br {
+    display: none;
+  }
+
+  .body {
+    min-width: 0;
+    max-width: none;
+    margin-top: 18px;
+    gap: 14px;
+    font-size: 17px;
+  }
+}

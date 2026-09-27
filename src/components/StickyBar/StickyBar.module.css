@@ -1,0 +1,57 @@
+.bar {
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .bar.visible {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 18;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    box-sizing: border-box;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+    background: var(--bg);
+  }
+
+  :global(html[data-menu-open]) .bar {
+    display: none;
+  }
+
+  .email,
+  .resume {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    font-family: var(--mono);
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .email {
+    justify-content: center;
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  /* Two classes deep, so it outranks the global a:hover colour. */
+  .bar .email:hover {
+    color: var(--bg);
+  }
+
+  .bar .email:active {
+    background: var(--acc);
+  }
+
+  .resume {
+    box-sizing: border-box;
+    padding: 0 16px;
+    border: 1px solid var(--ink);
+  }
+}

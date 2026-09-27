@@ -131,3 +131,188 @@
   color: var(--mute);
   max-width: 56ch;
 }
+
+/* The phone toggle; hidden from 640px up. */
+.head {
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .heading {
+    margin: 16px 0 12px;
+  }
+
+  .role,
+  .nestedRole {
+    display: block;
+    padding: 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 0;
+  }
+
+  .nestedRole {
+    margin-left: 14px;
+    padding-left: 14px;
+    border-left: 1px solid var(--line);
+  }
+
+  .nestedRole:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .dates,
+  .title,
+  .nestedTitle {
+    display: none;
+  }
+
+  .head {
+    display: block;
+    margin: 0;
+    font: inherit;
+  }
+
+  .toggle {
+    all: unset;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 24px;
+    gap: 12px;
+    width: 100%;
+    padding: 16px 0;
+    cursor: pointer;
+  }
+
+  .toggle:focus-visible {
+    outline: 2px solid var(--acc);
+    outline-offset: 2px;
+  }
+
+  .nestedRole .toggle {
+    padding: 14px 0;
+  }
+
+  .headDates,
+  .headDatesCurrent {
+    display: block;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--mute);
+  }
+
+  .headDatesCurrent {
+    color: var(--acc);
+  }
+
+  .headTitle {
+    display: block;
+    margin-top: 6px;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .nestedRole .headTitle {
+    margin-top: 4px;
+    font-size: 20px;
+  }
+
+  .headCompany {
+    display: block;
+    margin-top: 2px;
+    color: var(--mute);
+  }
+
+  .sign {
+    padding-top: 22px;
+    font-family: var(--mono);
+    font-size: 20px;
+    line-height: 1;
+    text-align: right;
+  }
+
+  .nestedRole .sign {
+    padding-top: 16px;
+  }
+
+  /* The collapsible body. */
+  .details,
+  .nestedDetails {
+    min-width: 0;
+    padding: 0 0 20px;
+    border-left: 0;
+  }
+
+  .nestedDetails {
+    padding-bottom: 18px;
+  }
+
+  .role[data-open='false'] > .details,
+  .nestedRole[data-open='false'] > .nestedDetails {
+    display: none;
+  }
+
+  .summary,
+  .nestedSummary {
+    font-size: 16px;
+  }
+
+  .summary {
+    margin: 0;
+  }
+
+  .nestedSummary {
+    margin: 0 0 12px;
+  }
+
+  .bullets,
+  .nestedBullets {
+    max-width: none;
+    padding-left: 18px;
+    gap: 8px;
+  }
+
+  .bullets {
+    margin: 14px 0 0;
+  }
+
+  .nestedBullets {
+    margin: 0;
+  }
+
+  /* Tags on one mono line (see TagList), plus the company link for freelance roles. */
+  .tags {
+    margin-top: 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--mute);
+  }
+
+  .nestedRole .tags {
+    margin-top: 12px;
+  }
+
+  .group {
+    padding-top: 0;
+  }
+
+  .groupHead {
+    display: block;
+    padding: 20px 0 8px;
+    border-top: 1px solid var(--line);
+  }
+
+  .groupDates {
+    display: none;
+  }
+
+  .groupIntro {
+    min-width: 0;
+  }
+
+  .groupText {
+    margin: 4px 0 0;
+    max-width: none;
+    font-size: 16px;
+  }
+}

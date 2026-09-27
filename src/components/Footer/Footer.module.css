@@ -39,3 +39,62 @@
   font-size: 12px;
   color: var(--mute);
 }
+
+@media (max-width: 639px) {
+  .footer {
+    margin: 0 var(--gutter);
+    scroll-margin-top: 56px;
+  }
+
+  .inner {
+    padding: 40px 0 24px;
+  }
+
+  .label {
+    margin-bottom: 16px;
+  }
+
+  .title {
+    max-width: none;
+    font-size: 44px;
+  }
+
+  .rows {
+    margin-top: 28px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 14px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    min-height: 56px;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+  }
+
+  .rowLabel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .rowIcon {
+    font-size: 18px;
+  }
+
+  .glyph {
+    color: var(--acc);
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 40px;
+    padding-top: 0;
+    border-top: 0;
+  }
+}

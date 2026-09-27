@@ -43,3 +43,39 @@
   border: 1px solid var(--line);
   padding: 5px 10px;
 }
+
+/* Phones: every list reads as one line, "PyTorch · Transformers · …". */
+@media (max-width: 639px) {
+  .list li {
+    display: inline;
+  }
+
+  .list li + li::before {
+    content: ' · ';
+  }
+
+  /* Runs inline inside the role body's tag line, which sets the type. */
+  .role,
+  .nested {
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+  }
+
+  .card {
+    display: block;
+    padding-top: 6px;
+  }
+
+  .chip {
+    display: block;
+    margin: 6px 0 0;
+    line-height: 1.7;
+    color: var(--mute);
+  }
+
+  .chip li {
+    padding: 0;
+    border: 0;
+  }
+}

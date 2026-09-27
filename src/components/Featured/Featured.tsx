@@ -5,15 +5,17 @@ import { FactList } from '@/components/FactList/FactList';
 import { Media } from '@/components/Media/Media';
 import { Rich } from '@/components/Rich/Rich';
 import { ExternalLink } from '@/components/ExternalLink/ExternalLink';
+import { Variant } from '@/components/Variant/Variant';
 import styles from './Featured.module.css';
 
 export function Featured() {
-  const { highlight } = featured;
+  const { highlight, primaryLink, secondaryLink } = featured;
 
   return (
-    <Section labelledBy="featured-h">
+    <Section id="work" labelledBy="featured-h">
       <SectionLabel
         label={featured.label}
+        labelShort={featured.labelShort}
         aside={featured.aside}
         variant="featured"
       />
@@ -28,29 +30,37 @@ export function Featured() {
           <h2 id="featured-h" className={styles.title}>
             <Rich value={featured.title} />
           </h2>
-          <p className={styles.text}>{featured.text}</p>
-          <p className={styles.press}>
-            <Rich value={featured.press} />
-          </p>
+          {/* On phones the press line runs on at the end of the paragraph. */}
+          <div className={styles.copy}>
+            <p className={styles.text}>{featured.text}</p>
+            <p className={styles.press}>
+              <Rich value={featured.press} />
+            </p>
+          </div>
           <div className={styles.links}>
-            <ExternalLink
-              href={featured.primaryLink.href}
-              className={`${styles.link} ${styles.accent}`}
-            >
-              {featured.primaryLink.label}
-            </ExternalLink>
-            <ExternalLink
-              href={featured.secondaryLink.href}
-              className={styles.link}
-            >
-              {featured.secondaryLink.label}
-            </ExternalLink>
+            {[primaryLink, secondaryLink].map((link) => (
+              <ExternalLink
+                key={link.href}
+                href={link.href}
+                className={
+                  link === primaryLink
+                    ? `${styles.link} ${styles.accent}`
+                    : styles.link
+                }
+              >
+                <Variant desktop={link.label} mobile={link.shortLabel} />
+                <span aria-hidden="true" className="mobile-only">
+                  ↗
+                </span>
+              </ExternalLink>
+            ))}
           </div>
         </div>
       </div>
 
       <SectionLabel
         label={highlight.label}
+        labelShort={highlight.labelShort}
         aside={highlight.aside}
         variant="sub"
       />

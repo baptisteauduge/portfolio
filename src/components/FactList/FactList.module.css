@@ -40,3 +40,55 @@
 .featured .detail {
   font-size: 19px;
 }
+
+@media (max-width: 639px) {
+  .hero {
+    display: block;
+    margin: 28px 0 0;
+    border-top: 1px solid var(--ink);
+  }
+
+  .hero .item {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero .term {
+    padding-top: 3px;
+  }
+
+  .hero .detail {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  /* A hairline grid: 1px gaps over a --line background. */
+  .featured {
+    margin: 20px 0 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    border: 1px solid var(--line);
+    background: var(--line);
+  }
+
+  .featured .item {
+    padding: 14px;
+    border-top: 0;
+    background: var(--card);
+  }
+
+  .featured .item:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .featured .detail {
+    margin-top: 6px;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+}

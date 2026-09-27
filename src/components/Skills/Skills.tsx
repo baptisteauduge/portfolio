@@ -6,7 +6,7 @@ import styles from './Skills.module.css';
 
 export function Skills() {
   return (
-    <Section labelledBy="skills-h">
+    <Section id="skills" labelledBy="skills-h">
       <SectionLabel label={skills.label} />
       <h2 id="skills-h" className={styles.heading}>
         {skills.title}
