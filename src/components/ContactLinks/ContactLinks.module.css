@@ -38,3 +38,43 @@
 .pushRight {
   margin-left: auto;
 }
+
+@media (max-width: 639px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .hero .cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 0;
+  }
+
+  .row .cta:active {
+    background: var(--acc);
+  }
+
+  .hero .resume {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 52px;
+    padding: 0 18px;
+    border: 1px solid var(--ink);
+    text-decoration: none;
+  }
+
+  /* The icons live in the menu and in Contact on phones. */
+  .hero .pushRight {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
+}

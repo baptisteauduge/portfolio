@@ -91,3 +91,27 @@
 .toggle:hover {
   color: var(--acc);
 }
+
+/* Phones: the figure runs edge to edge (see Featured) in a vertical 4:5 crop. */
+@media (max-width: 639px) {
+  .placeholder,
+  .image,
+  .videoFrame,
+  .streamFrame {
+    aspect-ratio: 4 / 5;
+  }
+
+  .placeholder {
+    padding: 24px;
+  }
+
+  /* Full height, centred: the ATM stays in frame, the black bars fall outside. */
+  .streamFrame .video {
+    width: calc(100% * 16 / 9 * 5 / 4);
+    height: 100%;
+  }
+
+  .caption {
+    margin: 10px var(--gutter) 0;
+  }
+}

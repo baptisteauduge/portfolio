@@ -23,3 +23,25 @@
   font-weight: 400;
   font-style: italic;
 }
+
+/* Phones: a ruled list, each group's skills on one mono line (see TagList). */
+@media (max-width: 639px) {
+  .heading {
+    margin: 16px 0 8px;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  .group {
+    padding: 14px 0;
+    border-top: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .groupTitle {
+    margin: 0;
+    font-size: 18px;
+  }
+}

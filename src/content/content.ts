@@ -10,10 +10,16 @@ export type Rich = string | Inline[];
 
 export type LinkItem = { label: string; href: string };
 
-export type Fact = { term: string; detail: string };
+export type Fact = {
+  term: string;
+  detail: string;
+  /** Shorter wording for the phone layout. */
+  termShort?: string;
+  detailShort?: string;
+};
 
 export type FeaturedMedia =
-  /** Live HLS stream, shown in a 4:3 frame (see Media.module.css). */
+  /** Live HLS stream, in a 4:3 frame, 4:5 on phones (see Media.module.css). */
   | { kind: 'stream'; src: string; poster: string; label: string }
   /** Muted video loop file, shown in a 16:10 frame. */
   | { kind: 'video'; src: string; poster: string; label: string }
@@ -32,6 +38,8 @@ export type Role = {
 
 export type Project = {
   date: string;
+  /** Shorter date line for the phone layout. */
+  dateShort?: string;
   /** "Private", or a link to the code. */
   source: { label: string; href?: string };
   title: string;
@@ -46,11 +54,15 @@ export type CourseworkItem = {
   title: string;
   href: string;
   text: string;
+  /** Shorter description for the phone layout. */
+  textShort?: string;
 };
 
 export const site = {
   url: 'https://www.auduge.com',
   name: 'Baptiste Audugé',
+  /** Brand in the phone header. */
+  shortName: 'B. Audugé',
   firstName: 'Baptiste',
   lastName: 'Audugé',
   gaId: 'G-V41EHHLH07',
@@ -72,19 +84,36 @@ export const ui = {
   tagsLabel: 'Technologies',
   pause: 'Pause',
   play: 'Play',
+  // Phone layout.
+  menu: 'Menu',
+  close: 'Close',
+  tapToExpand: 'Tap to expand',
+  swipe: 'Swipe →',
+  /** Marks the current role in the phone Experience list. */
+  current: '●',
+  /** Company link at the end of a freelance role on phones. */
+  site: 'Site ↗',
 };
 
 export const links = {
   email: {
     label: 'Email me → baptiste.auduge@student-cs.fr',
+    shortLabel: 'Email me →',
+    address: 'baptiste.auduge@student-cs.fr',
     href: 'mailto:baptiste.auduge@student-cs.fr',
   },
-  resume: { label: 'Resume (PDF)', href: '/Baptiste_Auduge_Resume.pdf' },
+  resume: {
+    label: 'Resume (PDF)',
+    shortLabel: 'Resume',
+    href: '/Baptiste_Auduge_Resume.pdf',
+  },
   github: {
+    name: 'GitHub',
     label: 'GitHub profile',
     href: 'https://github.com/baptisteauduge',
   },
   linkedin: {
+    name: 'LinkedIn',
     label: 'LinkedIn profile',
     href: 'https://www.linkedin.com/in/baptiste-auduge/',
   },
@@ -98,25 +127,43 @@ export const header = {
     { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
   ] satisfies LinkItem[],
+  /** The phone menu, numbered 01 to 06. */
+  menu: [
+    { label: 'Work', href: '#work' },
+    { label: 'About', href: '#about' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Contact', href: '#contact' },
+  ] satisfies LinkItem[],
 };
 
 export const hero = {
   eyebrow: 'Applied AI · Machine learning',
-  name: 'Baptiste Audugé',
   lede: 'Engineering student at CentraleSupélec (Université Paris-Saclay), previously Sorbonne Université. I build applied AI and real-time systems that have to work outside the notebook — for uranium mines, financial advisors, and a live-streamed ATM.',
+  introShort:
+    'Engineering student at CentraleSupélec. I build applied AI and real-time systems that have to work outside the notebook — for uranium mines, financial advisors, and a live-streamed ATM.',
   facts: [
     {
       term: 'Looking for',
+      termShort: 'Role',
       detail:
         '6-month role in applied AI / machine learning — internship, VIE or fixed-term contract',
+      detailShort:
+        '6 months in applied AI / ML — internship, VIE or fixed-term',
     },
-    { term: 'Starting', detail: 'February or March 2027' },
+    {
+      term: 'Starting',
+      termShort: 'From',
+      detail: 'February or March 2027',
+    },
     { term: 'Where', detail: 'Asia, the US or Canada' },
   ] satisfies Fact[],
 };
 
 export const featured = {
   label: '01 — Featured work',
+  labelShort: '01 — Featured',
   aside: 'QSTNMRK, 2026',
   // The live stream plays muted while the figure is on screen. The poster is
   // a still from the stream, shown before it starts, under reduced motion and
@@ -137,14 +184,17 @@ export const featured = {
   press: ['Featured in ', { em: 'designboom' }, '.'] satisfies Rich,
   primaryLink: {
     label: 'Watch it live — thelastdollar.art ↗',
+    shortLabel: 'Watch it live',
     href: 'https://thelastdollar.art',
   },
   secondaryLink: {
     label: 'Read the designboom feature ↗',
+    shortLabel: 'Read the designboom feature',
     href: 'https://www.designboom.com/art/internet-living-sculpture-one-dollar-time-qstnmrk-the-last-dollar/',
   },
   highlight: {
     label: 'Deep learning for real operations',
+    labelShort: 'Deep learning',
     aside: 'Orano, 2026',
     title: [
       'A physics-informed model for ',
@@ -157,7 +207,11 @@ export const featured = {
         term: 'Architecture',
         detail: 'Transformer with spatio-temporal cross-attention + Neural ODE',
       },
-      { term: 'Data', detail: '10,000+ well time series, up to 20 years each' },
+      {
+        term: 'Data',
+        detail: '10,000+ well time series, up to 20 years each',
+        detailShort: '10,000+ well series, up to 20 years',
+      },
       { term: 'Found', detail: '~30% of legacy data silently imputed' },
     ] satisfies Fact[],
   },
@@ -166,7 +220,9 @@ export const featured = {
 export const about = {
   label: '02 — About',
   title: [
-    'Math, applied AI,',
+    // The trailing space keeps a space between the two parts on phones,
+    // where the line break is hidden.
+    'Math, applied AI, ',
     { br: true },
     { em: 'and systems that ship.' },
   ] satisfies Rich,
@@ -175,6 +231,9 @@ export const about = {
     "Right now I'm a data science intern at Orano and lead developer at QSTNMRK, on art e-commerce and live-streaming projects. A few years of freelancing before that taught me to pin down what a client really needs, and to stay on the hook when something breaks after delivery.",
     "Next, I want to work close to the people who have the problem — on hard technical problems, across different clients. I'm looking for a 6-month role from February or March 2027 — internship, VIE or fixed-term contract all work for me — in Asia, the US or Canada.",
   ],
+  /** The last paragraph on phones, where the hero already gives role, dates and place. */
+  closingShort:
+    'Next, I want to work close to the people who have the problem — on hard technical problems, across different clients.',
 };
 
 export const experience = {
@@ -321,6 +380,7 @@ export const projects = {
         },
         {
           date: 'May 2024 · with Bouygues Telecom',
+          dateShort: 'May 2024 · Bouygues Telecom',
           source: privateSource,
           title: 'Anomaly Detection on a LoRaWAN IoT Network',
           text: 'A Spark pipeline over large-scale LoRaWAN logs that flags devices and traffic behaving abnormally and points at likely causes — unsupervised, on time-series features.',
@@ -367,12 +427,16 @@ export const projects = {
         title: 'Vigenère Cipher Cracker ↗',
         href: 'https://github.com/baptisteauduge/vigenere-cipher-crack',
         text: 'Recovers key length by index of coincidence and the key by Pearson correlation. Python, course 3I024.',
+        textShort:
+          'Key length by index of coincidence, key by Pearson correlation. Python.',
       },
       {
         date: 'Jun 2023',
         title: 'Stack-Based Language Interpreter ↗',
         href: 'https://github.com/baptisteauduge/interpreter-pf2023',
         text: 'OCaml interpreter for PF23, a small PostScript-inspired language with functions and conditionals.',
+        textShort:
+          'OCaml interpreter for PF23, a small PostScript-inspired language.',
       },
     ] satisfies CourseworkItem[],
   },

@@ -40,3 +40,26 @@
   margin: 0;
   text-wrap: pretty;
 }
+
+/* Phones: a card in a swipe row (see Projects). */
+@media (max-width: 639px) {
+  .card {
+    flex: 0 0 84%;
+    box-sizing: border-box;
+    gap: 10px;
+    padding: 20px;
+    scroll-snap-align: start;
+  }
+
+  .meta {
+    gap: 0;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}

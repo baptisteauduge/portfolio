@@ -2,3 +2,11 @@
   padding-bottom: clamp(64px, 8vw, 96px);
   scroll-margin-top: 72px;
 }
+
+@media (max-width: 639px) {
+  .section {
+    padding-bottom: 48px;
+    /* Height of the phone header. */
+    scroll-margin-top: 56px;
+  }
+}

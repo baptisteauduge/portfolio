@@ -1,0 +1,72 @@
+.button,
+.sheet {
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 44px;
+    padding: 0 12px;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  /* Two 18 x 1px bars, 5px apart. */
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .burger::before,
+  .burger::after {
+    content: '';
+    width: 18px;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* Starts under the 56px header; its top rule stands in for the header's. */
+  .sheet.open {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 19;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 11px var(--gutter) calc(32px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+    background: var(--bg);
+    font-family: var(--serif);
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 34px;
+    line-height: 1.1;
+    text-decoration: none;
+  }
+
+  .index {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--mute);
+  }
+
+  .footer {
+    margin-top: auto;
+  }
+}

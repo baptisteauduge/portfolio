@@ -35,3 +35,20 @@
   text-decoration: none;
   padding: 6px 0;
 }
+
+@media (max-width: 639px) {
+  .header {
+    z-index: 20;
+  }
+
+  .inner {
+    height: 56px;
+    padding: 0 8px 0 var(--gutter);
+    flex-wrap: nowrap;
+  }
+
+  /* Replaced by the Menu button. */
+  .nav {
+    display: none;
+  }
+}

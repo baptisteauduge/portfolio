@@ -68,6 +68,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: '#f6f3ee',
   colorScheme: 'light',
+  // Lets the phone contact bar sit above the home indicator (safe-area insets).
+  viewportFit: 'cover',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

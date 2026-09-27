@@ -9,6 +9,8 @@ styled with CSS Modules, and hosted on [Vercel](https://vercel.com/).
 ## Editing
 
 All the copy lives in [`src/content/content.ts`](src/content/content.ts); components only handle layout.
+Below 640px the site switches to a phone layout: the same components restyled by `@media (max-width: 639px)`
+blocks in each CSS module, with `*Short` copy variants in `content.ts` where the phone wording differs.
 The Last Dollar figure plays the sculpture's live stream (`featured.media`), muted and only while on screen.
 
 ## Commands

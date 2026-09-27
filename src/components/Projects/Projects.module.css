@@ -73,3 +73,78 @@
   font-size: 16px;
   color: var(--mute);
 }
+
+@media (max-width: 639px) {
+  .heading {
+    margin-top: 16px;
+  }
+
+  .groupTitle {
+    margin: 32px 0 12px;
+    font-size: 21px;
+  }
+
+  .groupTitle.firstGroup {
+    margin-top: 24px;
+  }
+
+  .count {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-style: normal;
+    color: var(--mute);
+  }
+
+  /* A swipe row that bleeds to the screen edges and snaps card by card. */
+  .grid {
+    display: flex;
+    gap: 12px;
+    margin: 0 calc(-1 * var(--gutter));
+    padding: 0 var(--gutter) 4px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 var(--gutter);
+    scrollbar-width: none;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .coursework {
+    margin-top: 32px;
+  }
+
+  .courseworkTitle {
+    margin: 0;
+  }
+
+  .course {
+    display: block;
+    padding: 0;
+  }
+
+  .courseRow {
+    display: block;
+    padding: 14px 0;
+    text-decoration: none;
+  }
+
+  .courseRowTitle {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 19px;
+  }
+
+  .courseArrow {
+    color: var(--acc);
+  }
+
+  .courseRowText {
+    display: block;
+    margin-top: 2px;
+    font-size: 15px;
+    color: var(--mute);
+  }
+}

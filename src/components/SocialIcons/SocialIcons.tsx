@@ -17,14 +17,37 @@ const icons = {
 
 export type SocialIcon = keyof typeof icons;
 
+/** A brand icon on its own, 1em tall. */
+export function BrandIcon({
+  icon,
+  className,
+}: {
+  icon: SocialIcon;
+  className?: string;
+}) {
+  return (
+    <svg
+      viewBox={icons[icon].viewBox}
+      className={className ? `${styles.icon} ${className}` : styles.icon}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path fill="currentColor" d={icons[icon].path} />
+    </svg>
+  );
+}
+
 type Props = {
   items: { icon: SocialIcon; label: string; href: string }[];
+  /** large: 24px icons on 48px targets, in the phone menu. */
+  size?: 'default' | 'large';
   className?: string;
 };
 
-export function SocialIcons({ items, className }: Props) {
+export function SocialIcons({ items, size = 'default', className }: Props) {
+  const classes = [styles.icons, size === 'large' && styles.large, className];
   return (
-    <div className={`${styles.icons} ${className ?? ''}`}>
+    <div className={classes.filter(Boolean).join(' ')}>
       {items.map(({ icon, label, href }) => (
         <ExternalLink
           key={icon}
@@ -33,14 +56,7 @@ export function SocialIcons({ items, className }: Props) {
           aria-label={label}
           className={styles.link}
         >
-          <svg
-            viewBox={icons[icon].viewBox}
-            className={styles.icon}
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path fill="currentColor" d={icons[icon].path} />
-          </svg>
+          <BrandIcon icon={icon} />
         </ExternalLink>
       ))}
     </div>

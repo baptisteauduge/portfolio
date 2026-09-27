@@ -27,3 +27,29 @@
   font-weight: 300;
   text-wrap: pretty;
 }
+
+@media (max-width: 639px) {
+  .hero {
+    padding: 36px 0 40px;
+  }
+
+  .eyebrow {
+    margin: 0 0 20px;
+    font-size: 12px;
+  }
+
+  /* As narrow as its longest word: first and last name on their own lines. */
+  .name {
+    max-width: min-content;
+    font-size: 56px;
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+  }
+
+  .lede {
+    margin-top: 22px;
+    max-width: none;
+    font-size: 21px;
+    line-height: 1.35;
+  }
+}
