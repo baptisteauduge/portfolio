@@ -79,11 +79,11 @@ export const site = {
 export const seo = {
   title: 'Baptiste Audugé — Applied AI & machine learning',
   description:
-    'CentraleSupélec engineering student building applied AI and real-time systems. Seeking a 6-month internship in applied AI / machine learning from February/March 2027 in Asia, the US or Canada.',
+    'CentraleSupélec engineering student building applied AI and real-time systems. Seeking a 6-month internship in applied AI / machine learning from February/March 2027 in London.',
   imageAlt: 'Baptiste Audugé — Applied AI & machine learning',
   /** Person description in the JSON-LD structured data. */
   personDescription:
-    'Engineering student at CentraleSupélec working on applied AI and machine learning, seeking a 6-month internship in applied AI / machine learning from February/March 2027 in Asia, the US or Canada.',
+    'Engineering student at CentraleSupélec working on applied AI and machine learning, seeking a 6-month internship in applied AI / machine learning from February/March 2027 in London.',
 };
 
 export const ui = {
@@ -165,7 +165,7 @@ export const hero = {
       termShort: 'From',
       detail: 'February or March 2027',
     },
-    { term: 'Where', detail: 'Asia, the US or Canada' },
+    { term: 'Where', detail: 'London' },
   ] satisfies Fact[],
 };
 
@@ -237,7 +237,7 @@ export const about = {
   paragraphs: [
     "I started programming at 12 and never really stopped. I did a double bachelor's in mathematics and computer science at Sorbonne Université, then joined CentraleSupélec (Université Paris-Saclay), where I'm on a gap year before my final engineering year. The mathematics is what I lean on most — usually when an AI model does something I wasn't expecting.",
     "Right now I'm a data science intern at Orano and lead developer at QSTNMRK, on art e-commerce and live-streaming projects. A few years of freelancing before that taught me to pin down what a client really needs, and to stay on the hook when something breaks after delivery.",
-    "Next, I want to work close to the people who have the problem — on hard technical problems, across different clients. I'm looking for a 6-month role from February or March 2027 — internship, VIE or fixed-term contract all work for me — in Asia, the US or Canada.",
+    "Next, I want to work close to the people who have the problem — on hard technical problems, across different clients. I'm looking for a 6-month role from February or March 2027 — internship, VIE or fixed-term contract all work for me — in London.",
   ],
   /** The last paragraph on phones, where the hero already gives role, dates and place. */
   closingShort:
