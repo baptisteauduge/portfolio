@@ -77,13 +77,13 @@ export const site = {
 };
 
 export const seo = {
-  title: 'Baptiste Audugé — Applied AI & machine learning',
+  title: 'Baptiste Audugé — Machine learning & quantitative modelling',
   description:
-    'CentraleSupélec engineering student building applied AI and real-time systems. Seeking a 6-month internship in applied AI / machine learning from February/March 2027 in London.',
-  imageAlt: 'Baptiste Audugé — Applied AI & machine learning',
+    'CentraleSupélec engineering student in machine learning and quantitative modelling. Seeking a 6-month role in machine learning or quantitative finance from February 2027 in London: internship, VIE or fixed-term contract.',
+  imageAlt: 'Baptiste Audugé — Machine learning & quantitative modelling',
   /** Person description in the JSON-LD structured data. */
   personDescription:
-    'Engineering student at CentraleSupélec working on applied AI and machine learning, seeking a 6-month internship in applied AI / machine learning from February/March 2027 in London.',
+    'Engineering student at CentraleSupélec working on machine learning and quantitative modelling, seeking a 6-month role in machine learning or quantitative finance from February 2027 in London: internship, VIE or fixed-term contract.',
 };
 
 export const ui = {
@@ -147,23 +147,21 @@ export const header = {
 };
 
 export const hero = {
-  eyebrow: 'Applied AI · Machine learning',
-  lede: 'Engineering student at CentraleSupélec (Université Paris-Saclay), previously Sorbonne Université. I build applied AI and real-time systems that have to work outside the notebook — for uranium mines, financial advisors, and a live-streamed ATM.',
+  eyebrow: 'Machine learning · Quantitative modelling',
+  lede: 'Engineering student at CentraleSupélec (Université Paris-Saclay), previously Sorbonne Université. I build machine learning models, quantitative tools and real-time systems that have to work outside the notebook — for uranium mines, financial advisors, and a live-streamed ATM.',
   introShort:
-    'Engineering student at CentraleSupélec. I build applied AI and real-time systems that have to work outside the notebook — for uranium mines, financial advisors, and a live-streamed ATM.',
+    'Engineering student at CentraleSupélec. I build machine learning models, quantitative tools and real-time systems that have to work outside the notebook — for uranium mines, financial advisors, and a live-streamed ATM.',
   facts: [
     {
       term: 'Looking for',
       termShort: 'Role',
       detail:
-        '6-month role in applied AI / machine learning — internship, VIE or fixed-term contract',
-      detailShort:
-        '6 months in applied AI / ML — internship, VIE or fixed-term',
+        '6-month role in machine learning or quantitative finance, from February 2027: internship, VIE or fixed-term contract.',
     },
     {
       term: 'Starting',
       termShort: 'From',
-      detail: 'February or March 2027',
+      detail: 'February 2027',
     },
     { term: 'Where', detail: 'London' },
   ] satisfies Fact[],
@@ -208,7 +206,7 @@ export const featured = {
       'A physics-informed model for ',
       { em: 'uranium mine operations' },
     ] satisfies Rich,
-    text: 'Asked to fix a production model planning well cleaning, I traced its errors to interactions between neighboring wells — then derived a new model from the geology literature.',
+    text: 'Asked to fix a production model planning well cleaning, I traced its errors to interactions between neighbouring wells — then derived a new model from the geology literature.',
     link: { label: 'Read the full role ↓', href: '#experience' },
     facts: [
       {
@@ -230,14 +228,14 @@ export const about = {
   title: [
     // The trailing space keeps a space between the two parts on phones,
     // where the line break is hidden.
-    'Math, applied AI, ',
+    'Maths, applied AI, ',
     { br: true },
     { em: 'and systems that ship.' },
   ] satisfies Rich,
   paragraphs: [
     "I started programming at 12 and never really stopped. I did a double bachelor's in mathematics and computer science at Sorbonne Université, then joined CentraleSupélec (Université Paris-Saclay), where I'm on a gap year before my final engineering year. The mathematics is what I lean on most — usually when an AI model does something I wasn't expecting.",
     "Right now I'm a data science intern at Orano and lead developer at QSTNMRK, on art e-commerce and live-streaming projects. A few years of freelancing before that taught me to pin down what a client really needs, and to stay on the hook when something breaks after delivery.",
-    "Next, I want to work close to the people who have the problem — on hard technical problems, across different clients. I'm looking for a 6-month role from February or March 2027 — internship, VIE or fixed-term contract all work for me — in London.",
+    "Next, I want to work close to the people who have the problem — on hard technical problems, across different clients. I'm looking for a 6-month role from February 2027 — internship, VIE or fixed-term contract all work for me — in London.",
   ],
   /** The last paragraph on phones, where the hero already gives role, dates and place. */
   closingShort:
@@ -257,7 +255,7 @@ export const experience = {
       summary:
         'Global nuclear fuel cycle company, from uranium mining to recycling.',
       bullets: [
-        'Traced the errors of a production model planning well cleaning across uranium mines to an overlooked factor: interactions between neighboring wells.',
+        'Traced the errors of a production model planning well cleaning across uranium mines to an overlooked factor: interactions between neighbouring wells.',
         'Designed a physics-informed replacement — a Transformer with spatio-temporal cross-attention coupled to a Neural ODE, trained on 10,000+ well time series spanning up to 20 years.',
         'Built the extraction from mine monitoring systems (SQL, REST) and found ~30% of legacy data silently imputed.',
       ],
@@ -267,7 +265,6 @@ export const experience = {
         'Neural ODE',
         'Physics-informed ML',
         'SQL',
-        'Claude Code + MCP',
       ],
     },
     {
@@ -334,7 +331,7 @@ export const experience = {
         company: { name: 'Monaliza', href: 'https://www.monaliza.fr/' },
         summary: 'B2B2C financial products distributor.',
         bullets: [
-          'Wrote the financial formulas behind a retirement savings simulator with three paths: raise retirement income, reduce taxes, or build capital.',
+          "Built with the founders the projection tool (NestJS, React) brokers used in client meetings to present the company's retirement products; also modelled the B2B commission schemes (upfront, trail and linear payouts, clawbacks).",
           'Set up the servers, development environments and monitoring with Traefik, Prometheus and Grafana.',
         ],
         tags: [
@@ -351,8 +348,8 @@ export const experience = {
         title: 'Fullstack Developer',
         company: { name: 'Lexem', href: 'https://www.lexem.io/' },
         bullets: [
-          "Built and iterated on the financial simulators driving the company's SEO and SEA campaigns as the market got more competitive.",
-          "Designed a web app for digital client files and advisor booking — still part of the company's sales operations when it was partially acquired.",
+          "Built with advisors a retirement-plan (PER) simulator projecting capital at retirement and each client's tax saving, including carried-over deduction ceilings.",
+          'Designed a web app for digital client files and advisor booking.',
           'Administered the internal Salesforce CRM with an external team at BayBridgeDigital.',
         ],
         tags: ['React', 'PHP', 'MySQL', 'TypeScript', 'NestJS', 'Salesforce'],
@@ -380,10 +377,11 @@ export const projects = {
           tags: ['Computer vision', 'Raspberry Pi', 'Arduino', 'Control'],
         },
         {
-          date: 'Jun 2024',
+          date: 'Jun 2025 · Team project, CentraleSupélec',
+          dateShort: 'Jun 2025 · CentraleSupélec',
           source: privateSource,
-          title: 'Graphical Models for Financial Dependency',
-          text: 'Estimates conditional dependencies between MSCI World assets with Graphical Lasso. The recovered network hinges on regularization, so most of the work was model selection and rolling-window validation.',
+          title: 'Graphical Models in Finance',
+          text: 'Sparse dependency networks across MSCI World stocks (Graphical Lasso, Ledoit-Wolf) on rolling 250-day windows; networks densify with new cross-sector links in turbulent periods.',
           tags: ['Python', 'Graphical Lasso', 'Statistics', 'Finance'],
         },
         {
@@ -484,7 +482,15 @@ export const skills = {
     },
     {
       title: 'Languages',
-      items: ['Python', 'TypeScript', 'C', 'C++', 'Java', 'OCaml', 'PHP'],
+      items: [
+        'Python',
+        'TypeScript',
+        'C',
+        'C++ (basics)',
+        'Java',
+        'OCaml',
+        'PHP',
+      ],
     },
   ],
 };
@@ -492,7 +498,7 @@ export const skills = {
 export const contact = {
   label: '06 — Contact',
   title: [
-    'Building applied AI in 2027? ',
+    'Building ML or quant models in 2027? ',
     { em: "Let's talk." },
   ] satisfies Rich,
   copyright: '© 2026 Baptiste Audugé',
