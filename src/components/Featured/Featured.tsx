@@ -19,6 +19,25 @@ export function Featured() {
         aside={featured.aside}
         variant="featured"
       />
+      {/* Orano first, then The Last Dollar under its own lighter rule. */}
+      <div className={styles.highlight}>
+        <div className={styles.highlightBody}>
+          <h2 id="featured-h" className={styles.highlightTitle}>
+            <Rich value={highlight.title} />
+          </h2>
+          <p className={styles.highlightText}>{highlight.text}</p>
+          <a href={highlight.link.href} className={styles.roleLink}>
+            {highlight.link.label}
+          </a>
+        </div>
+        <FactList facts={highlight.facts} variant="featured" />
+      </div>
+
+      <SectionLabel
+        label={featured.sub.label}
+        aside={featured.sub.aside}
+        variant="sub"
+      />
       <div className={styles.lead}>
         <Media
           media={featured.media}
@@ -27,9 +46,9 @@ export function Featured() {
           className={styles.figure}
         />
         <div className={styles.body}>
-          <h2 id="featured-h" className={styles.title}>
+          <h3 className={styles.title}>
             <Rich value={featured.title} />
-          </h2>
+          </h3>
           {/* On phones the press line runs on at the end of the paragraph. */}
           <div className={styles.copy}>
             <p className={styles.text}>{featured.text}</p>
@@ -56,25 +75,6 @@ export function Featured() {
             ))}
           </div>
         </div>
-      </div>
-
-      <SectionLabel
-        label={highlight.label}
-        labelShort={highlight.labelShort}
-        aside={highlight.aside}
-        variant="sub"
-      />
-      <div className={styles.highlight}>
-        <div className={styles.highlightBody}>
-          <h3 className={styles.highlightTitle}>
-            <Rich value={highlight.title} />
-          </h3>
-          <p className={styles.highlightText}>{highlight.text}</p>
-          <a href={highlight.link.href} className={styles.roleLink}>
-            {highlight.link.label}
-          </a>
-        </div>
-        <FactList facts={highlight.facts} variant="featured" />
       </div>
     </Section>
   );

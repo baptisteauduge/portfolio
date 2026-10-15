@@ -170,7 +170,10 @@ export const hero = {
 export const featured = {
   label: '01 — Featured work',
   labelShort: '01 — Featured',
-  aside: 'QSTNMRK, 2026',
+  /** The Orano highlight comes first, so the opening rule names it. */
+  aside: 'Orano, 2026',
+  /** The lighter rule over The Last Dollar, second in the section. */
+  sub: { label: 'Real-time systems', aside: 'QSTNMRK, 2026' },
   // The live stream plays muted while the figure is on screen. The poster is
   // a still from the stream, shown before it starts, under reduced motion and
   // in browsers without native HLS (Firefox). Other options: a { kind: 'video' }
@@ -198,10 +201,8 @@ export const featured = {
     shortLabel: 'Read the designboom feature',
     href: 'https://www.designboom.com/art/internet-living-sculpture-one-dollar-time-qstnmrk-the-last-dollar/',
   },
+  /** Orano, shown first in the section. */
   highlight: {
-    label: 'Deep learning for real operations',
-    labelShort: 'Deep learning',
-    aside: 'Orano, 2026',
     title: [
       'A physics-informed model for ',
       { em: 'uranium mine operations' },
@@ -233,7 +234,7 @@ export const about = {
     { em: 'and systems that ship.' },
   ] satisfies Rich,
   paragraphs: [
-    "I started programming at 12 and never really stopped. I did a double bachelor's in mathematics and computer science at Sorbonne Université, then joined CentraleSupélec (Université Paris-Saclay), where I'm on a gap year before my final engineering year. The mathematics is what I lean on most — usually when an AI model does something I wasn't expecting.",
+    "I started programming at 12 and never really stopped. I did a double bachelor's in mathematics and computer science, and I'm now on a gap year before my final engineering year. The mathematics is what I lean on most — usually when an AI model does something I wasn't expecting.",
     "Right now I'm a data science intern at Orano and lead developer at QSTNMRK, on art e-commerce and live-streaming projects. A few years of freelancing before that taught me to pin down what a client really needs, and to stay on the hook when something breaks after delivery.",
     "Next, I want to work close to the people who have the problem — on hard technical problems, across different clients. I'm looking for a 6-month role from February 2027 — internship, VIE or fixed-term contract all work for me — in London.",
   ],
@@ -257,7 +258,7 @@ export const experience = {
       bullets: [
         'Traced the errors of a production model planning well cleaning across uranium mines to an overlooked factor: interactions between neighbouring wells.',
         'Designed a physics-informed replacement — a Transformer with spatio-temporal cross-attention coupled to a Neural ODE, trained on 10,000+ well time series spanning up to 20 years.',
-        'Built the extraction from mine monitoring systems (SQL, REST) and found ~30% of legacy data silently imputed.',
+        'Built the extraction from mine monitoring systems (SQL, REST).',
       ],
       tags: [
         'PyTorch',
@@ -306,7 +307,7 @@ export const experience = {
     roles: [
       {
         dates: '2023 — 2024',
-        title: 'Fullstack Developer',
+        title: 'Full-Stack Developer (freelance)',
         company: {
           name: 'Logic Invest',
           href: 'https://www.logic-invest.com/simulateurs/per',
@@ -327,7 +328,7 @@ export const experience = {
       },
       {
         dates: 'Jun 2022 — Sep 2024',
-        title: 'Product Developer',
+        title: 'Full-Stack Developer (freelance)',
         company: { name: 'Monaliza', href: 'https://www.monaliza.fr/' },
         summary: 'B2B2C financial products distributor.',
         bullets: [
@@ -428,14 +429,6 @@ export const projects = {
   coursework: {
     title: 'Coursework — Sorbonne Université',
     items: [
-      {
-        date: 'Feb 2024',
-        title: 'Vigenère Cipher Cracker',
-        href: 'https://github.com/baptisteauduge/vigenere-cipher-crack',
-        text: 'Recovers key length by index of coincidence and the key by Pearson correlation. Python, course 3I024.',
-        textShort:
-          'Key length by index of coincidence, key by Pearson correlation. Python.',
-      },
       {
         date: 'Jun 2023',
         title: 'Stack-Based Language Interpreter',
